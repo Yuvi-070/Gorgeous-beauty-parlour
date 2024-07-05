@@ -4143,7 +4143,7 @@ textarea.form-input {
 */
 .breadcrumbs-custom {
 	position: relative;
-	padding: 25px 0;
+	padding: 15px 0;
 	background-color: #edf1f1;
 	background-position: center;
 }
@@ -5112,11 +5112,24 @@ html [class*='section-'].section-bottom-0 {
 
 .section-page-title {
 	padding: 40px 0;
+	
 }
 
 @media (min-width: 768px) {
 	.section-page-title {
 		padding: 80px 0;
+		
+	}
+}
+.section-page-title1 {
+	padding: 40px 0;
+	color: #ffffff;
+}
+
+@media (min-width: 768px) {
+	.section-page-title1 {
+		padding: 80px 0;
+		
 	}
 }
 
