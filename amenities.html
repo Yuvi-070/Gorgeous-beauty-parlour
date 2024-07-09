@@ -34,6 +34,27 @@
       html.lt-ie-10 .ie-panel {
         display: block;
       }
+      swiper-container {
+        width: 370px;
+        height: 420px;
+      }
+
+      swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        flex-direction: column; /* Add this line */
+        justify-content: center;
+        align-items: center;
+      }
+
+      swiper-slide img {
+        display: block;
+        width: 370px;
+        height: 370px;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
@@ -108,14 +129,18 @@
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item ">
+                      <li class="rd-nav-item">
                         <a class="rd-nav-link" href="index.html">Home</a>
                       </li>
                       <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="about-us.html">About-Services</a>
+                        <a class="rd-nav-link" href="about-us.html"
+                          >About-Services</a
+                        >
                       </li>
                       <li class="rd-nav-item active">
-                        <a class="rd-nav-link" href="amenities.html">Amenities</a>
+                        <a class="rd-nav-link" href="amenities.html"
+                          >Amenities</a
+                        >
                       </li>
                       <li class="rd-nav-item">
                         <a class="rd-nav-link" href="contacts.html">Contacts</a>
@@ -128,11 +153,79 @@
           </nav>
         </div>
       </header>
-      
-      
-      
-
-
+      <section class="section section-md bg-default text-center">
+        <div class="Container">
+          <h2 class="heading-decorate">
+            Unwind & Be Pampered<br /><span class="divider"></span>Our Amenities
+            Await
+          </h2>
+        </div>
+      </section>
+      <!-- Swiper -->
+      <section class="section">
+        <swiper-container class="mySwiper" navigation="true">
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Straight Cut</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Movement Hair-cut</h3>
+          </swiper-slide>
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Half-Feather Cut</h3>
+          </swiper-slide>
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Full-Feather Cut</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Standing Cut (45')</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Sliding Cut (90')</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Reverse Graduation</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Advance Reverse Graduation (Nauching) </h3></swiper-slide
+          >  
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Invert Blend</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Wedge Cut (Layer Cut)</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Edge Cut (Boy Cut)</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Disconnected Cut</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Natural Cut</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Apple Cut (90')</h3></swiper-slide
+          >
+          <swiper-slide
+            ><img src="images/team-1-370x370.jpg" alt="" />
+            <h3>Snow White Cut</h3></swiper-slide
+          >
+          
+      </section>
 
       <footer class="section bg-default section-xs-type-1 footer-minimal">
         <section class="bg-gray-100 section-xs text-center">
@@ -151,5 +244,6 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
