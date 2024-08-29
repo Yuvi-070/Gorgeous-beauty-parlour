@@ -1,303 +1,383 @@
 <!-- Page Title-->
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
+  <head>
+    <title>About</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Stylesheets-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Lato:300i,400,400i,700%7CMontserrat:400,500,600,700%7CPlayfair+Display:400,700,700i%7COswald:400,700,700i"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-<head>
-  <title>About</title>
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="viewport"
-    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta charset="utf-8" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <!-- Stylesheets-->
-  <link rel="stylesheet" type="text/css"
-    href="//fonts.googleapis.com/css?family=Lato:300i,400,400i,700%7CMontserrat:400,500,600,700%7CPlayfair+Display:400,700,700i%7COswald:400,700,700i" />
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="stylesheet" href="css/fonts.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
 
-  <style>
-    .ie-panel {
-      display: none;
-      background: #212121;
-      padding: 10px 0;
-      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
-      clear: both;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
+      html.ie-10 .ie-panel,
+      html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+      swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
 
-    html.ie-10 .ie-panel,
-    html.lt-ie-10 .ie-panel {
-      display: block;
-    }
-    swiper-container {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
+      swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 100%;
+      }
 
-    swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 100%;
-    }
+      swiper-slide img {
+        display: block;
+        width: 100%;
+        padding: 10px;
+      }
+      img.landscape {
+        display: block;
+        width: 100%;
+        padding-top: 65px;
+      }
+    </style>
+  </head>
 
-    swiper-slide img {
-      display: block;
-      width: 100%;
-      padding: 10px;
-    }
-    img.landscape {
-      display: block;
-      width: 100%;
-      padding-top: 65px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="ie-panel">
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg"
-        height="42" width="820"
-        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
-  </div>
-  <div class="preloader">
-    <div class="preloader-body">
-      <div class="cssload-jumping">
-        <span></span><span></span><span></span><span></span><span></span>
+  <body>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/"
+        ><img
+          src="images/ie8-panel/warning_bar_0000_us.jpg"
+          height="42"
+          width="820"
+          alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."
+      /></a>
+    </div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-jumping">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="page">
-    <!-- Page Header-->
-    <header class="section page-header">
-      <!-- RD Navbar-->
-      <div class="rd-navbar-wrap">
-        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
-          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
-          data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
-          data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
-          data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-          <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
-            <span></span>
-          </div>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav
+            class="rd-navbar rd-navbar-classic"
+            data-layout="rd-navbar-fixed"
+            data-sm-layout="rd-navbar-fixed"
+            data-md-layout="rd-navbar-fixed"
+            data-md-device-layout="rd-navbar-fixed"
+            data-lg-layout="rd-navbar-static"
+            data-lg-device-layout="rd-navbar-static"
+            data-xl-layout="rd-navbar-static"
+            data-xl-device-layout="rd-navbar-static"
+            data-lg-stick-up-offset="46px"
+            data-xl-stick-up-offset="46px"
+            data-xxl-stick-up-offset="46px"
+            data-lg-stick-up="true"
+            data-xl-stick-up="true"
+            data-xxl-stick-up="true"
+          >
+            <div
+              class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1"
+              data-rd-navbar-toggle=".rd-navbar-collapse"
+            >
+              <span></span>
+            </div>
 
-          <div class="rd-navbar-main-outer">
-            <div class="rd-navbar-main">
-              <!-- RD Navbar Panel-->
-              <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap">
-                  <span></span>
-                </button>
-                <!-- RD Navbar Brand-->
-                <div class="rd-navbar-brand">
-                  <a class="brand" href="index.html"><img src="images/Gorgeouslogo.png" alt="" width="257"
-                      height="84" /></a>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button
+                    class="rd-navbar-toggle"
+                    data-rd-navbar-toggle=".rd-navbar-nav-wrap"
+                  >
+                    <span></span>
+                  </button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="index.html"
+                      ><img
+                        src="images/Gorgeouslogo.png"
+                        alt=""
+                        width="257"
+                        height="84"
+                    /></a>
+                  </div>
                 </div>
-              </div>
-              <div class="rd-navbar-main-element">
-                <div class="rd-navbar-nav-wrap">
-                  <!-- RD Navbar Nav-->
-                  <ul class="rd-navbar-nav">
-                    <li class="rd-nav-item">
-                      <a class="rd-nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="rd-nav-item active">
-                      <a class="rd-nav-link" href="about-us.html">About-Services</a>
-                    </li>
-                    <li class="rd-nav-item">
-                      <a class="rd-nav-link" href="amenities.html">Amenities</a>
-                    <li class="rd-nav-item">
-                      <a class="rd-nav-link" href="contacts.html">Contacts</a>
-                    </li>
-                  </ul>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item active">
+                        <a class="rd-nav-link" href="about-us.html"
+                          >About-Services</a
+                        >
+                      </li>
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="amenities.html"
+                          >Amenities</a
+                        >
+                      </li>
+
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <section class="section-page-title1" style="
+          </nav>
+        </div>
+      </header>
+      <section
+        class="section-page-title1"
+        style="
           background-image: url(images/Gorgeous/Aboutus.png);
           background-size: cover;
-        ">
-      <div class="container">
-        <h1 class="page-title1">About Us</h1>
-      </div>
-    </section>
-    <section class="breadcrumbs-custom">
-      <div class="container">
-        <ul class="breadcrumbs-custom-path">
-          <li><a href="index.html">Home</a></li>
-          <li class="active">About</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- WHY OUR CLIENTS  -->
-    <section class="section section-lg bg-gray-100">
-      <div class="container">
-        <div class="row row-50 align-items-lg-center justify-content-xl-between">
-          <div class="col-lg-6 text-center">
-            <div class="block-parallax-element">
-              <span class="prev-element" data-parallax-scroll='{"y": -30, "x": 0,  "smoothness": 50 }'></span><img
-                src="images/home-1-378x463.jpg" alt="" width="378" height="463" /><span class="next-element"
-                data-parallax-scroll='{"y": 30, "x": 0,  "smoothness": 50 }'></span>
-            </div>
-          </div>
-          <div class="col-lg-6 col-xl-5">
-            <h2 class="heading-decorate">
-              Why Our Clients <br /><span class="divider"></span>Choose Us
-            </h2>
-            <p class="big text-gray-800">
-              We are the leading beauty salon in Pimpri-Chinchwad providing high-quality
-              hairdressing, makeup, and skin care services to everyone.
-            </p>
-            <p class="text-spacing-60">
-              Our clients appreciate and value our level of customer service,
-              the skills of our stylists and estheticians as well as our
-              professional approach to everything we do.
-            </p>
-            <a class="button button-primary" href="amenities.html">learn more</a>
-          </div>
+        "
+      >
+        <div class="container">
+          <h1 class="page-title1">About Us</h1>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="breadcrumbs-custom">
+        <div class="container">
+          <ul class="breadcrumbs-custom-path">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">About</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Animation -->
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg)">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-10">
-            <div class="row">
-             
-              
-              <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <div class="icon"><span class="happy"></span></div>
-                    <br /><span>Happy Client</span><br />
-                    <strong class="number" data-number="3000">0</strong>
-                  </div>
-                </div>
-              </div>
-               <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <div class="icon"><span class="heart"></span></div>
-                    <br /><span>Makeup Over Done</span><br />
-                    <strong class="number" data-number="1500"></strong>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <div class="icon"><span class="facial"></span></div>
-                    <br /><span>Skin Treatment</span><br />
-                    <strong class="number" data-number="1000">0</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <div class="icon"><span class="pro"></span></div>
-                    <br /><span>Hair Treatments</span><br />
-                    <strong class="number" data-number="600">0</strong>
-                  </div>
-                </div>
+      <!-- WHY OUR CLIENTS  -->
+      <section class="section section-lg bg-gray-100">
+        <div class="container">
+          <div
+            class="row row-50 align-items-lg-center justify-content-xl-between"
+          >
+            <div class="col-lg-6 text-center">
+              <div class="block-parallax-element">
+                <span
+                  class="prev-element"
+                  data-parallax-scroll='{"y": -30, "x": 0,  "smoothness": 50 }'
+                ></span
+                ><img
+                  src="images/home-1-378x463.jpg"
+                  alt=""
+                  width="378"
+                  height="463"
+                /><span
+                  class="next-element"
+                  data-parallax-scroll='{"y": 30, "x": 0,  "smoothness": 50 }'
+                ></span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- WHO ARE WE -->
-    <section class="section section-lg bg-default">
-      <div class="container">
-        <div class="row row-50 align-items-lg-center justify-content-xl-between">
-          <div class="col-lg-6">
-            <div class="block-xs">
-              <h2>Who We Are</h2>
-              <div class="divider-lg"></div>
+            <div class="col-lg-6 col-xl-5">
+              <h2 class="heading-decorate">
+                Why Our Clients <br /><span class="divider"></span>Choose Us
+              </h2>
               <p class="big text-gray-800">
-                Cras ut vestibulum tortor. In in nisi sit amet metus varius
-                pulvinar in vitae ipsum nec mi sollicitudin Fusce turpis
-                massa,
+                We are the leading beauty salon in Pimpri-Chinchwad providing
+                high-quality hairdressing, makeup, and skin care services to
+                everyone.
               </p>
-              <p>
-                In ante sapien, dapibus luctus aliquet a, accumsan sit amet
-                dolor. Mauris id facilisis dolor. Donec malesuada, est eu
-                dignissim eleifend, est nulla dignissim nisl. Fusce turpis
-                massa, mattis sit.
+              <p class="text-spacing-60">
+                Our clients appreciate and value our level of customer service,
+                the skills of our stylists and estheticians as well as our
+                professional approach to everything we do.
               </p>
-            </div>
-            <div class="row row-30">
-              <div class="col-md-6">
-                <div class="box-contact-info-with-icon">
-                  <span class="icon mdi mdi-clock icon-primary"></span>
-                  <h5>Opening Hours</h5>
-                  <ul class="list-xs">
-                    <li>
-                      <span class="text-gray-800">Monday-Friday: </span>
-                      8:00am–8:00pm
-                    </li>
-                    <li>
-                      <span class="text-gray-800">Saturday:</span>
-                      8:00am–6:00pm
-                    </li>
-                    <li>
-                      <span class="text-gray-800">Sunday: </span> Closed
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="box-contact-info-with-icon">
-                  <span class="icon mdi mdi-clock icon-primary"></span>
-                  <h5>Our Location</h5>
-                  <ul class="list-xs">
-                    <li>
-                      <span class="text-gray-800">Address: </span> Washington,
-                      USA 6036 Richmond hwy., VA, 2230
-                    </li>
-                    <li>
-                      <span class="text-gray-800">Offices: </span> 284-290
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <a class="button button-primary" href="amenities.html"
+                >learn more</a
+              >
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="box-images box-images-variant-3">
-              <div class="box-images-item" data-parallax-scroll='{"y": -20,   "smoothness": 30 }'>
-                <img src="images/overview-1-470x282.jpg" alt="" width="470" height="282" />
-              </div>
-              <div class="box-images-item box-images-without-border"
-                data-parallax-scroll='{"y": 40,  "smoothness": 30 }'>
-                <img src="images/overview-2-470x282.jpg" alt="" width="470" height="282" />
+        </div>
+      </section>
+
+      <!-- Animation -->
+      <section
+        class="ftco-section ftco-counter img"
+        id="section-counter"
+        style="background-image: url(images/bg_4.jpg)"
+      >
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="row">
+                <div
+                  class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 text-center">
+                    <div class="text">
+                      <div class="icon"><span class="happy"></span></div>
+                      <br /><span>Happy Client</span><br />
+                      <strong class="number" data-number="3000">0</strong>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 text-center">
+                    <div class="text">
+                      <div class="icon"><span class="heart"></span></div>
+                      <br /><span>Makeup Over Done</span><br />
+                      <strong class="number" data-number="1500"></strong>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 text-center">
+                    <div class="text">
+                      <div class="icon"><span class="facial"></span></div>
+                      <br /><span>Skin Treatment</span><br />
+                      <strong class="number" data-number="1000">0</strong>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 text-center">
+                    <div class="text">
+                      <div class="icon"><span class="pro"></span></div>
+                      <br /><span>Hair Treatments</span><br />
+                      <strong class="number" data-number="600">0</strong>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- <section
+      </section>
+
+      <!-- WHO ARE WE -->
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <div
+            class="row row-50 align-items-lg-center justify-content-xl-between"
+          >
+            <div class="col-lg-6">
+              <div class="block-xs">
+                <h2>Who We Are</h2>
+                <div class="divider-lg"></div>
+                <p class="big text-gray-800">
+                  Cras ut vestibulum tortor. In in nisi sit amet metus varius
+                  pulvinar in vitae ipsum nec mi sollicitudin Fusce turpis
+                  massa,
+                </p>
+                <p>
+                  In ante sapien, dapibus luctus aliquet a, accumsan sit amet
+                  dolor. Mauris id facilisis dolor. Donec malesuada, est eu
+                  dignissim eleifend, est nulla dignissim nisl. Fusce turpis
+                  massa, mattis sit.
+                </p>
+              </div>
+              <div class="row row-30">
+                <div class="col-md-6">
+                  <div class="box-contact-info-with-icon">
+                    <span class="icon mdi mdi-clock icon-primary"></span>
+                    <h5>Opening Hours</h5>
+                    <ul class="list-xs">
+                      <li>
+                        <span class="text-gray-800">Monday-Friday: </span>
+                        8:00am–8:00pm
+                      </li>
+                      <li>
+                        <span class="text-gray-800">Saturday:</span>
+                        8:00am–6:00pm
+                      </li>
+                      <li>
+                        <span class="text-gray-800">Sunday: </span> Closed
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="box-contact-info-with-icon">
+                    <span class="icon mdi mdi-clock icon-primary"></span>
+                    <h5>Our Location</h5>
+                    <ul class="list-xs">
+                      <li>
+                        <span class="text-gray-800">Address: </span> Washington,
+                        USA 6036 Richmond hwy., VA, 2230
+                      </li>
+                      <li>
+                        <span class="text-gray-800">Offices: </span> 284-290
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-images box-images-variant-3">
+                <div
+                  class="box-images-item"
+                  data-parallax-scroll='{"y": -20,   "smoothness": 30 }'
+                >
+                  <img
+                    src="images/overview-1-470x282.jpg"
+                    alt=""
+                    width="470"
+                    height="282"
+                  />
+                </div>
+                <div
+                  class="box-images-item box-images-without-border"
+                  data-parallax-scroll='{"y": 40,  "smoothness": 30 }'
+                >
+                  <img
+                    src="images/overview-2-470x282.jpg"
+                    alt=""
+                    width="470"
+                    height="282"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section
         class="section parallax-container"
         data-parallax-img="images/parallax-04-1920x1320.jpg"
       >
@@ -326,384 +406,593 @@
         </div>
       </section> -->
 
-
-    <!-- OUR SERVICES  -->
-    <section class="section section-md bg-default text-center">
-      <div class="container">
-        <h2>Our Services</h2>
-        <div class="divider-lg"></div>
-        <p class="block-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          bibendum elit cursus dapibus maximus. Maecenas sapien urna, cursus
-          ut turpis non, gravida vehicula nisl.
-        </p>
-        <div class="row row-30">
-          <div class="col-12">
-            <!-- Owl Carousel-->
-            <div class="owl-carousel carousel-creative" data-items="1" data-lg-items="17" data-dots="true"
-              data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30"
-              data-mouse-drag="false">
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/advance-haircut.jpg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Advance Hair-Cut</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/facial-370x370.jpg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Facial</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/spa.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">SPA</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/body-wax.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Body Wax</a></h4>
-                  <p></p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/Pro-makeup.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Professional Make-Up</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/hair-ext.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Hair Extension</a></h4>
-                  <p>Procedure</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/bridal.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Bridal</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/hair-color.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Hair Coloring</a></h4>
-                  <p>Beautyt</p>
-                </div>
-
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/hair-style.jpg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Hair Styling</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/chemical.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Chemical Treatments</a></h4>
-                  <p>Procedure</p>
-                </div>
-              </div>
-                <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/mani-pedi.jpg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Advance MANICURES & PEDICURES</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/body-polish.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Body Polishing</a></h4>
-                  <p>Beauty</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/hair-rebond.jpg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Re-Bonding</a></h4>
-                  <p>Procedure</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/hair-smooth.jpg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Smoothening</a></h4>
-                  <p>Procedure</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/keratin.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Keratin Treatment</a></h4>
-                  <p>Procedure</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/botox.jpeg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Botox</a></h4>
-                  <p>Procedure</p>
-                </div>
-              </div>
-              <div class="team-minimal team-minimal-with-shadow">
-                <figure>
-                  <img src="images/Gorgeous/nano.jpg" alt="" width="370" height="370" />
-                </figure>
-                <div class="team-minimal-caption">
-                  <h4 class="team-title"><a href="#">Nano Plastic Treatment</a></h4>
-                  <p>Procedure</p>
-                </div>
-              </div>
-
-              
-
-            </div>
-            
-          </div>
-          <div class="col-12">
-              <a class="button button-primary" href="amenities.html">View all Services</a>
-            </div>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- Certificates  -->
-
-    <section class="section section-md bg-default text-center">
-      <h2 class="heading-decorate">
-            Your Assurance of Quality<br /><span class="divider"></span>Beauty Certifications
-          </h2>
-      <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
-    <swiper-slide>
-      <img class="landscape" src="images/Gorgeous/aai che certificates/certificate5.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="landscape" src="images/Gorgeous/aai che certificates/certificate8.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="images/Gorgeous/aai che certificates/certificate2.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="images/Gorgeous/aai che certificates/certificate3.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="images/Gorgeous/aai che certificates/certificate7.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="landscape" src="images/Gorgeous/aai che certificates/certificate6.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img class="landscape" src="images/Gorgeous/aai che certificates/certificate1.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="images/Gorgeous/aai che certificates/certificate4.jpg" />
-    </swiper-slide>
-    
-  </swiper-container>
-    </section>
-
-
-    <section class="section section-lg bg-default">
-      <div class="container">
-        <div class="row row-50">
-          <div class="col-lg-6">
-            <div class="block-xs">
-              <h2 class="heading-decorate">
-                Testimonials<br class="d-inline" /><span class="divider"></span>of Our Clients
-              </h2>
-              <p class="big text-gray-800">
-                Thanks to our clients’ regular reviews, testimonials, and
-                comments we are able to improve our salon.
-              </p>
-              <p>
-                Unlike other salons, we prefer to maintain a constant
-                connection with our customers and receive feedback on every
-                service, whether it’s a simple haircut or complex wedding
-                makeup. If you’ve already visited Glory, feel free to contact
-                us and send your testimonial.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <!-- Owl Carousel-->
-            <div class="owl-carousel carousel-corporate" data-items="1" data-dots="true" data-nav="false"
-              data-stage-padding="10px" data-loop="true" data-autoplay="true" data-margin="25px"
-              data-mouse-drag="false">
-              <div class="quote-corporate">
-                <div class="quote-header">
-                  <h4>Jennifer Moreno</h4>
-                  <p class="big">Client</p>
-                </div>
-                <div class="quote-body">
-                  <div class="quote-text">
-                    <p>
-                      I love my eyebrow design. I'm usually very picky about
-                      my eyebrows and not everyone can give me what I want.
-                      You are amazing. Thank you for the amazing job you’ve
-                      done, I’ll be recommending you to my friends from now
-                      on!
-                    </p>
-                  </div>
-                  <svg class="quote-body-mark" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    width="66px" height="49px" viewbox="0 0 66 49" enable-background="new 0 0 66 49"
-                    xml:space="preserve">
-                    <g></g>
-                    <path
-                      d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288						c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407						C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669						c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098						c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876						C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352						c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z">
-                    </path>
-                  </svg>
-                </div>
-                <div class="quote-image">
-                  <img src="images/home-1-10-90x90.jpg" alt="" width="90" height="90" />
-                </div>
-              </div>
-              <div class="quote-corporate">
-                <div class="quote-header">
-                  <h4>Mary Matthews</h4>
-                  <p class="big">Client</p>
-                </div>
-                <div class="quote-body">
-                  <div class="quote-text">
-                    <p>
-                      Janette cut my hair and did partial highlights and my
-                      experience was excellent! She took her time doing my
-                      hair and I am very pleased with the results. If you are
-                      still looking where to have your hair cut the best way,
-                      head for Glory!
-                    </p>
-                  </div>
-                  <svg class="quote-body-mark" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    width="66px" height="49px" viewbox="0 0 66 49" enable-background="new 0 0 66 49"
-                    xml:space="preserve">
-                    <g></g>
-                    <path
-                      d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288						c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407						C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669						c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098						c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876						C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352						c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z">
-                    </path>
-                  </svg>
-                </div>
-                <div class="quote-image">
-                  <img src="images/home-1-11-90x90.jpg" alt="" width="90" height="90" />
-                </div>
-              </div>
-              <div class="quote-corporate">
-                <div class="quote-header">
-                  <h4>Amanda Smith</h4>
-                  <p class="big">Client</p>
-                </div>
-                <div class="quote-body">
-                  <div class="quote-text">
-                    <p>
-                      Thank you for the first-rate beauty service! I am very
-                      happy with the outcome. I feel fortunate to have met
-                      someone with years of training in makeup who is also
-                      bright and knowledgeable enough to determine my perfect
-                      style.
-                    </p>
-                  </div>
-                  <svg class="quote-body-mark" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    width="66px" height="49px" viewbox="0 0 66 49" enable-background="new 0 0 66 49"
-                    xml:space="preserve">
-                    <g></g>
-                    <path
-                      d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288						c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407						C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669						c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098						c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876						C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352						c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z">
-                    </path>
-                  </svg>
-                </div>
-                <div class="quote-image">
-                  <img src="images/home-1-12-90x90.jpg" alt="" width="90" height="90" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="col-12">
-              <a class="button button-primary" href="#">View all Testimonials</a>
-            </div>
-      </div>
-      
-    </section>
-
-    <section class="section"></section>
-
-    <footer class="section bg-default section-xs-type-1 footer-minimal">
-      <section class="bg-gray-100 section-xs text-center">
+      <!-- OUR SERVICES  -->
+      <section class="section section-md bg-default text-center">
         <div class="container">
-          <p class="rights">
-            <span>&copy;&nbsp;</span><span class="copyright-year"></span>. All
-            Rights Reserved. Design by <b>Yuvraj Tale</b>
-            <a href="https://www.templatemonster.com">TemplateMonster</a>
+          <h2>Our Services</h2>
+          <div class="divider-lg"></div>
+          <p class="block-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            bibendum elit cursus dapibus maximus. Maecenas sapien urna, cursus
+            ut turpis non, gravida vehicula nisl.
           </p>
+          <div class="row row-30">
+            <div class="col-12">
+              <!-- Owl Carousel-->
+              <div
+                class="owl-carousel carousel-creative"
+                data-items="1"
+                data-lg-items="17"
+                data-dots="true"
+                data-nav="false"
+                data-stage-padding="15"
+                data-loop="true"
+                data-autoplay="true"
+                data-margin="30"
+                data-mouse-drag="false"
+              >
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/advance-haircut.jpg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Advance Hair-Cut</a></h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/facial-370x370.jpg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Facial</a></h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/spa.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">SPA</a></h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/body-wax.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Body Wax</a></h4>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/Pro-makeup.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title">
+                      <a href="#">Professional Make-Up</a>
+                    </h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/hair-ext.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Hair Extension</a></h4>
+                    <p>Procedure</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/bridal.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Bridal</a></h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/hair-color.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Hair Coloring</a></h4>
+                    <p>Beautyt</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/hair-style.jpg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Hair Styling</a></h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/chemical.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title">
+                      <a href="#">Chemical Treatments</a>
+                    </h4>
+                    <p>Procedure</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/mani-pedi.jpg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title">
+                      <a href="#">Advance MANICURES & PEDICURES</a>
+                    </h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/body-polish.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Body Polishing</a></h4>
+                    <p>Beauty</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/hair-rebond.jpg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Re-Bonding</a></h4>
+                    <p>Procedure</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/hair-smooth.jpg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Smoothening</a></h4>
+                    <p>Procedure</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/keratin.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title">
+                      <a href="#">Keratin Treatment</a>
+                    </h4>
+                    <p>Procedure</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/botox.jpeg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title"><a href="#">Botox</a></h4>
+                    <p>Procedure</p>
+                  </div>
+                </div>
+                <div class="team-minimal team-minimal-with-shadow">
+                  <figure>
+                    <img
+                      src="images/Gorgeous/nano.jpg"
+                      alt=""
+                      width="370"
+                      height="370"
+                    />
+                  </figure>
+                  <div class="team-minimal-caption">
+                    <h4 class="team-title">
+                      <a href="#">Nano Plastic Treatment</a>
+                    </h4>
+                    <p>Procedure</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <a class="button button-primary" href="amenities.html"
+                >View all Services</a
+              >
+            </div>
+          </div>
         </div>
       </section>
-    </footer>
-  </div>
-  <!-- Global Mailform Output-->
-  <div class="snackbars" id="form-output-global"></div>
-  <!-- Javascript-->
-  <script src="js/core.min.js"></script>
-  <script src="js/script.js"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
+      <!-- Certificates  -->
 
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
+      <section class="section section-md bg-default text-center">
+        <h2 class="heading-decorate">
+          Your Assurance of Quality<br /><span class="divider"></span>Beauty
+          Certifications
+        </h2>
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          effect="coverflow"
+          grab-cursor="true"
+          centered-slides="true"
+          slides-per-view="auto"
+          coverflow-effect-rotate="50"
+          coverflow-effect-stretch="0"
+          coverflow-effect-depth="100"
+          coverflow-effect-modifier="1"
+          coverflow-effect-slide-shadows="true"
+        >
+          <swiper-slide>
+            <img
+              class="landscape"
+              src="images/Gorgeous/aai che certificates/certificate5.jpg"
+            />
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              class="landscape"
+              src="images/Gorgeous/aai che certificates/certificate8.jpg"
+            />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/Gorgeous/aai che certificates/certificate2.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/Gorgeous/aai che certificates/certificate3.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/Gorgeous/aai che certificates/certificate7.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              class="landscape"
+              src="images/Gorgeous/aai che certificates/certificate6.jpg"
+            />
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              class="landscape"
+              src="images/Gorgeous/aai che certificates/certificate1.jpg"
+            />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/Gorgeous/aai che certificates/certificate4.jpg" />
+          </swiper-slide>
+        </swiper-container>
+      </section>
 
-  <script src="js/jquery.animateNumber.min.js"></script>
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-lg-6">
+              <div class="block-xs">
+                <h2 class="heading-decorate">
+                  Testimonials<br class="d-inline" /><span
+                    class="divider"
+                  ></span
+                  >of Our Clients
+                </h2>
+                <p class="big text-gray-800">
+                  Thanks to our clients’ regular reviews, testimonials, and
+                  comments we are able to improve our salon.
+                </p>
+                <p>
+                  Unlike other salons, we prefer to maintain a constant
+                  connection with our customers and receive feedback on every
+                  service, whether it’s a simple haircut or complex wedding
+                  makeup. If you’ve already visited Glory, feel free to contact
+                  us and send your testimonial.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <!-- Owl Carousel-->
+              <div
+                class="owl-carousel carousel-corporate"
+                data-items="1"
+                data-dots="true"
+                data-nav="false"
+                data-stage-padding="10px"
+                data-loop="true"
+                data-autoplay="true"
+                data-margin="25px"
+                data-mouse-drag="false"
+              >
+                <div class="quote-corporate">
+                  <div class="quote-header">
+                    <h4>Arpita Dixit</h4>
+                    <p class="big">Client</p>
+                  </div>
+                  <div class="quote-body">
+                    <div class="quote-text">
+                      <p>
+                        Punctuality,very friendly always ready if emergency
+                        makeup is required and my most favourite place for
+                        relaxation. And I am visiting parlour since from last 10
+                        years and I am permanent customer of Gorgeous parlour
+                        ,never ,ever I will change parlour because best and
+                        quality service.
+                      </p>
+                    </div>
+                    <svg
+                      class="quote-body-mark"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="66px"
+                      height="49px"
+                      viewbox="0 0 66 49"
+                      enable-background="new 0 0 66 49"
+                      xml:space="preserve"
+                    >
+                      <g></g>
+                      <path
+                        d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288						c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407						C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669						c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098						c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876						C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352						c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="quote-image">
+                    <img
+                      src="images/Gorgeous/test1.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                  </div>
+                </div>
+                <div class="quote-corporate">
+                  <div class="quote-header">
+                    <h4>Vrushali Gunjal</h4>
+                    <p class="big">Client</p>
+                  </div>
+                  <div class="quote-body">
+                    <div class="quote-text">
+                      <p>
+                        Great experience here from the start to the end. Every
+                        staff member is friendly and warm.Loved how my hair came
+                        out. Everyone there was so nice and welcoming.
+                        Definitely recommend.
+                      </p>
+                    </div>
+                    <svg
+                      class="quote-body-mark"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="66px"
+                      height="49px"
+                      viewbox="0 0 66 49"
+                      enable-background="new 0 0 66 49"
+                      xml:space="preserve"
+                    >
+                      <g></g>
+                      <path
+                        d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288						c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407						C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669						c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098						c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876						C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352						c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="quote-image">
+                    <img
+                      src="images/Gorgeous/test2.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                  </div>
+                </div>
+                <div class="quote-corporate">
+                  <div class="quote-header">
+                    <h4>Suvarna Tadigadapa</h4>
+                    <p class="big">Client</p>
+                  </div>
+                  <div class="quote-body">
+                    <div class="quote-text">
+                      <p>
+                        I have been visiting for past 6yrs..wonderful experience
+                      </p>
+                    </div>
+                    <svg
+                      class="quote-body-mark"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="66px"
+                      height="49px"
+                      viewbox="0 0 66 49"
+                      enable-background="new 0 0 66 49"
+                      xml:space="preserve"
+                    >
+                      <g></g>
+                      <path
+                        d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288						c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407						C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669						c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098						c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876						C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352						c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="quote-image">
+                    <img
+                      src="images/Gorgeous/test3.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                  </div>
+                </div>
+                <div class="quote-corporate">
+                  <div class="quote-header">
+                    <h4>Lumbini Kamble</h4>
+                    <p class="big">Client</p>
+                  </div>
+                  <div class="quote-body">
+                    <div class="quote-text">
+                      <p>
+                        Awesome experience... Feeling relaxed 😎.. good
+                        service...
+                      </p>
+                    </div>
+                    <svg
+                      class="quote-body-mark"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="66px"
+                      height="49px"
+                      viewbox="0 0 66 49"
+                      enable-background="new 0 0 66 49"
+                      xml:space="preserve"
+                    >
+                      <g></g>
+                      <path
+                        d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288						c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407						C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669						c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098						c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876						C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352						c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="quote-image">
+                    <img
+                      src="images/Gorgeous/test4.jpg"
+                      alt=""
+                      width="90"
+                      height="90"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <a
+              class="button button-primary"
+              href="https://www.google.com/maps/place/GORGEOUS+BEAUTY+PARLOUR/@18.5991168,73.9964039,15z/data=!4m8!3m7!1s0x3bc2c7f37604cc79:0x1993e7b4e4958d69!8m2!3d18.64687!4d73.848727!9m1!1b1!16s%2Fg%2F11c0xpzt9r?authuser=1&entry=ttu"
+              >View all Testimonials</a
+            >
+          </div>
+        </div>
+      </section>
 
-  <script src="js/scrollax.min.js"></script>
+      <section class="section"></section>
 
-  <script src="js/main.js"></script>
+      <footer class="section bg-default section-xs-type-1 footer-minimal">
+        <section class="bg-gray-100 section-xs text-center">
+          <div class="container">
+            <p class="rights">
+              <span>&copy;&nbsp;</span><span class="copyright-year"></span>. All
+              Rights Reserved. Design by <b>Yuvraj Tale</b>
+              <a href="https://www.templatemonster.com">TemplateMonster</a>
+            </p>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
 
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/jquery.animateNumber.min.js"></script>
+
+    <script src="js/scrollax.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  </body>
 </html>
