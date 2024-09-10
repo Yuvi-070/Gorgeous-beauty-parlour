@@ -14841,3 +14841,12 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 .dtp .right {
 	right: 20px;
 }
+
+.aheading-decorate{
+	    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #151515;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
