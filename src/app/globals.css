@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;700i&family=Lato:wght@300;400;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary: #c85b8a;
+  --primary-dark: #a0416b;
+  --primary-light: #f0b8d0;
+  --secondary: #2d2d2d;
+  --accent: #f9e4ee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--secondary);
+  background: #fff;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+.section-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0.5rem auto 0;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.counter-section {
+  background-image: url('/images/Gorgeous/oursalon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slide.inactive {
+  opacity: 0;
+  z-index: 0;
+}
