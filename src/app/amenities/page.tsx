@@ -56,7 +56,7 @@ function AmenityCard({ name, image }: { name: string; image: string }) {
 export default function AmenitiesPage() {
   return (
     <>
-      <div className="relative h-56 md:h-72 mt-16 bg-pink-900 overflow-hidden">
+      <div className="relative h-56 md:h-72 bg-pink-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-pink-800 to-rose-900 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">Amenities</h1>

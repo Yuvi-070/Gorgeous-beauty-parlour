@@ -26,7 +26,7 @@ const certificates = Array.from({ length: 8 }, (_, i) => `/images/Gorgeous/aai%2
 export default function AboutPage() {
   return (
     <>
-      <div className="relative h-56 md:h-72 mt-16 overflow-hidden">
+      <div className="relative h-56 md:h-72 overflow-hidden">
         <Image src="/images/Gorgeous/Aboutus.png" alt="About Us" fill className="object-cover" />
         <div className="absolute inset-0 bg-pink-900/60 flex items-center justify-center">
           <div className="text-center text-white">

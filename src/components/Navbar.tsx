@@ -23,7 +23,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : "bg-white/95 py-3"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 border-b border-pink-100/60 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-white/95 shadow-md py-2" : "bg-white/80 py-3"}`}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/images/Gorgeouslogo.png" alt="Gorgeous Beauty Parlour" width={120} height={50} className="h-12 w-auto object-contain" />

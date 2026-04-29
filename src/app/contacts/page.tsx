@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ContactsPage() {
   return (
     <>
-      <div className="relative h-56 md:h-72 mt-16 bg-pink-900 overflow-hidden">
+      <div className="relative h-56 md:h-72 bg-pink-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-pink-800 to-rose-900 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">Contact Us</h1>
