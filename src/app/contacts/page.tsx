@@ -14,7 +14,7 @@ export default function ContactsPage() {
 
       <section className="py-24 bg-white/90">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Get In Touch</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-8 section-heading">Contact Information</h2>
             
@@ -70,8 +70,8 @@ export default function ContactsPage() {
             </div>
           </div>
 
-          <div className="bg-white/95 border border-rose-100/80 rounded-3xl shadow-2xl shadow-rose-200/40 p-6 md:p-8 text-center md:text-left">
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">Send a Message</h2>
+          <div className="bg-white/95 border border-rose-100/80 rounded-3xl shadow-2xl shadow-rose-200/40 p-6 md:p-8 text-left mx-auto w-full max-w-xl md:max-w-none">
+            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center md:text-left">Send a Message</h2>
             <form className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>

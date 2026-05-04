@@ -19,21 +19,21 @@ export default function Footer() {
             Professional beauty parlour offering premium hair, skin, and wellness treatments in Bhosari, Pune.
           </p>
         </div>
-        <div>
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
           <h3 className="text-white font-semibold text-lg mb-4 font-serif">Quick Links</h3>
           <ul className="space-y-2">
             {[{href:"/",l:"Home"},{href:"/about",l:"About Us"},{href:"/amenities",l:"Amenities"},{href:"/contacts",l:"Contact"}].map(({href,l}) => (
-              <li key={href}><Link href={href} className="text-sm hover:text-rose-300 transition-colors">{l}</Link></li>
+              <li key={href}><Link href={href} className="text-sm hover:text-rose-300 transition-colors duration-200">{l}</Link></li>
             ))}
           </ul>
         </div>
-        <div>
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
           <h3 className="text-white font-semibold text-lg mb-4 font-serif">Contact</h3>
           <address className="not-italic text-sm text-gray-400 space-y-2">
             <p>Shop no 18, Jai Ganesh Samrajya, G wing,<br />behind HDFC ATM, Indrayani Nagar,<br />Bhosari, Pune - 411039</p>
-            <p><a href="tel:+919822186362" className="hover:text-rose-300">+91 9822186362</a></p>
-            <p><a href="tel:+917219636275" className="hover:text-rose-300">+91 7219636275</a></p>
-            <p><a href="mailto:truptitale305@gmail.com" className="hover:text-rose-300">truptitale305@gmail.com</a></p>
+            <p><a href="tel:+919822186362" className="hover:text-rose-300 transition-colors duration-200">+91 9822186362</a></p>
+            <p><a href="tel:+917219636275" className="hover:text-rose-300 transition-colors duration-200">+91 7219636275</a></p>
+            <p><a href="mailto:truptitale305@gmail.com" className="hover:text-rose-300 transition-colors duration-200">truptitale305@gmail.com</a></p>
           </address>
         </div>
       </div>
