@@ -60,7 +60,7 @@ export default function HomePage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
           </div>
-          <Carousel itemClassName="basis-[85%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+          <Carousel>
             {services.map((s) => (
               <ServiceCard key={s.title} title={s.title} image={s.image} />
             ))}

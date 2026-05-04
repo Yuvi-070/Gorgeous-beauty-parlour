@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Carousel from "@/components/Carousel";
+import ServiceCard from "@/components/ServiceCard";
 
 const services = [
   { title: "Advance Hair-Cut", image: "/images/Gorgeous/advance-haircut.jpg", desc: "Expert haircuts tailored to your face shape and style." },
@@ -87,17 +88,9 @@ export default function AboutPage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
           </div>
-          <Carousel itemClassName="basis-[85%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+          <Carousel>
             {services.map((s) => (
-              <div key={s.title} className="group overflow-hidden rounded-2xl border border-rose-100/80 shadow-lg shadow-rose-100/40 hover:shadow-2xl hover:shadow-rose-200/50 transition-all duration-300 bg-white/95 text-center">
-                <div className="relative h-48 overflow-hidden">
-                  <Image src={s.image} alt={s.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-serif font-bold text-gray-900 mb-1">{s.title}</h3>
-                  <p className="text-gray-500 text-sm">{s.desc}</p>
-                </div>
-              </div>
+              <ServiceCard key={s.title} title={s.title} image={s.image} desc={s.desc} />
             ))}
           </Carousel>
         </div>
@@ -109,10 +102,10 @@ export default function AboutPage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Certifications</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Certificates</h2>
           </div>
-          <Carousel itemClassName="basis-[70%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+          <Carousel>
             {certificates.map((cert, i) => (
-              <div key={i} className="relative h-48 rounded-2xl overflow-hidden shadow-lg shadow-rose-100/40 hover:shadow-2xl transition-shadow">
-                <Image src={cert} alt={`Certificate ${i + 1}`} fill className="object-cover" />
+              <div key={i} className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl shadow-rose-100/40 bg-white">
+                <Image src={cert} alt={`Certificate ${i + 1}`} fill className="object-contain p-4" />
               </div>
             ))}
           </Carousel>

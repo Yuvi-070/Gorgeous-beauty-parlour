@@ -1,58 +1,84 @@
 "use client";
 
-import { Children, ReactNode, useRef } from "react";
+import { Children, ReactNode, useState } from "react";
 
 interface CarouselProps {
   children: ReactNode;
-  itemClassName?: string;
   className?: string;
-  controlsClassName?: string;
 }
 
-export default function Carousel({
-  children,
-  itemClassName = "",
-  className = "",
-  controlsClassName = "",
-}: CarouselProps) {
-  const trackRef = useRef<HTMLDivElement>(null);
+export default function Carousel({ children, className = "" }: CarouselProps) {
+  const items = Children.toArray(children);
+  const [current, setCurrent] = useState(0);
+  const [animating, setAnimating] = useState(false);
 
-  const scrollBy = (direction: number) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const amount = track.clientWidth * 0.9;
-    track.scrollBy({ left: amount * direction, behavior: "smooth" });
+  const go = (idx: number) => {
+    if (animating || idx === current) return;
+    setAnimating(true);
+    setTimeout(() => {
+      setCurrent(idx);
+      setAnimating(false);
+    }, 300);
   };
+
+  const prev = () => go((current - 1 + items.length) % items.length);
+  const next = () => go((current + 1) % items.length);
+
+  if (items.length === 0) return null;
 
   return (
     <div className={`relative ${className}`}>
-      <div className={`flex items-center justify-center gap-4 mb-6 ${controlsClassName}`}>
+      {/* Slide area */}
+      <div className="relative">
+        <div
+          className={`transition-opacity duration-300 ${animating ? "opacity-0" : "opacity-100"}`}
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          {items[current]}
+        </div>
+
+        {/* Prev arrow */}
         <button
           type="button"
-          onClick={() => scrollBy(-1)}
-          className="h-11 w-11 rounded-full border border-rose-200/70 bg-white/90 text-rose-700 text-xl shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-rose-50 flex items-center justify-center"
-          aria-label="Scroll carousel left"
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/90 text-rose-700 shadow-xl hover:bg-rose-50 hover:scale-110 transition-all duration-200 flex items-center justify-center text-2xl border border-rose-200/70 backdrop-blur-sm"
+          aria-label="Previous"
         >
           &#8249;
         </button>
+
+        {/* Next arrow */}
         <button
           type="button"
-          onClick={() => scrollBy(1)}
-          className="h-11 w-11 rounded-full border border-rose-200/70 bg-white/90 text-rose-700 text-xl shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-rose-50 flex items-center justify-center"
-          aria-label="Scroll carousel right"
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/90 text-rose-700 shadow-xl hover:bg-rose-50 hover:scale-110 transition-all duration-200 flex items-center justify-center text-2xl border border-rose-200/70 backdrop-blur-sm"
+          aria-label="Next"
         >
           &#8250;
         </button>
       </div>
-      <div
-        ref={trackRef}
-        className="no-scrollbar flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 -mx-2 pb-6"
-      >
-        {Children.map(children, (child, index) => (
-          <div key={index} className={`snap-start flex-shrink-0 ${itemClassName}`}>
-            {child}
-          </div>
-        ))}
+
+      {/* Counter & Dots */}
+      <div className="flex flex-col items-center gap-3 mt-5">
+        <span className="text-xs text-rose-400 font-medium tracking-widest uppercase">
+          {current + 1} / {items.length}
+        </span>
+        <div className="flex gap-2">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => go(i)}
+              className={`rounded-full transition-all duration-300 ${
+                i === current
+                  ? "bg-rose-500 w-8 h-2.5"
+                  : "bg-rose-200 w-2.5 h-2.5 hover:bg-rose-300"
+              }`}
+              aria-label={`Go to item ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
