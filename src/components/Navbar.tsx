@@ -67,13 +67,13 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-rose-100 px-4 py-5 flex flex-col gap-4 shadow-lg rounded-b-2xl">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-rose-100 px-4 py-5 flex flex-col items-center gap-4 shadow-lg rounded-b-2xl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className={`text-xs font-semibold tracking-[0.2em] uppercase ${pathname === link.href ? "text-rose-700" : "text-gray-700"}`}
+              className={`text-xs font-semibold tracking-[0.2em] uppercase transition-colors duration-200 hover:text-rose-700 ${pathname === link.href ? "text-rose-700 border-b-2 border-rose-500 pb-0.5" : "text-gray-700"}`}
             >
               {link.label}
             </Link>
@@ -81,7 +81,7 @@ export default function Navbar() {
           <Link
             href="/contacts"
             onClick={() => setOpen(false)}
-            className="bg-rose-600 text-white text-xs font-semibold tracking-[0.24em] uppercase px-5 py-2.5 rounded-full text-center shadow-lg shadow-rose-200/50"
+            className="bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.24em] uppercase px-7 py-2.5 rounded-full text-center shadow-lg shadow-rose-200/50 transition-colors duration-200"
           >
             Book Now
           </Link>

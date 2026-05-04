@@ -26,11 +26,11 @@ export default function Carousel({
 
   return (
     <div className={`relative ${className}`}>
-      <div className={`flex items-center justify-end gap-3 mb-6 ${controlsClassName}`}>
+      <div className={`flex items-center justify-center gap-4 mb-6 ${controlsClassName}`}>
         <button
           type="button"
           onClick={() => scrollBy(-1)}
-          className="h-10 w-10 rounded-full border border-rose-200/70 bg-white/90 text-rose-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          className="h-11 w-11 rounded-full border border-rose-200/70 bg-white/90 text-rose-700 text-xl shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-rose-50 flex items-center justify-center"
           aria-label="Scroll carousel left"
         >
           &#8249;
@@ -38,7 +38,7 @@ export default function Carousel({
         <button
           type="button"
           onClick={() => scrollBy(1)}
-          className="h-10 w-10 rounded-full border border-rose-200/70 bg-white/90 text-rose-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          className="h-11 w-11 rounded-full border border-rose-200/70 bg-white/90 text-rose-700 text-xl shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md hover:bg-rose-50 flex items-center justify-center"
           aria-label="Scroll carousel right"
         >
           &#8250;
