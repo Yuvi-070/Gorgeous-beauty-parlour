@@ -32,24 +32,28 @@ export default function HomePage() {
       <HeroSlider />
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
-          <div className="text-center md:text-left">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">About Us</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading leading-tight">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto leading-tight">
               Welcome to Gorgeous Beauty Parlour
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Located in the heart of Bhosari, Pune, Gorgeous Beauty Parlour has been a trusted name in beauty and wellness for over a decade. We offer a comprehensive range of services tailored to bring out the best in you.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              From advanced hair treatments and professional makeup to luxurious facials and spa therapies, our skilled team ensures you leave feeling rejuvenated and beautiful.
-            </p>
-            <Link href="/about" className="inline-block bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.24em] uppercase px-9 py-3 rounded-full transition-colors duration-300 shadow-lg shadow-rose-200/50">
-              Learn More
-            </Link>
           </div>
-          <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/60">
-            <Image src="/images/Gorgeous/why-choose.jpg" alt="Why Choose Gorgeous" fill className="object-cover" />
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div className="relative h-80 md:h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/60 order-1 md:order-none">
+              <Image src="/images/Gorgeous/why-choose.jpg" alt="Why Choose Gorgeous" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="text-center">
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Located in the heart of Bhosari, Pune, Gorgeous Beauty Parlour has been a trusted name in beauty and wellness for over a decade. We offer a comprehensive range of services tailored to bring out the best in you.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-8">
+                From advanced hair treatments and professional makeup to luxurious facials and spa therapies, our skilled team ensures you leave feeling rejuvenated and beautiful.
+              </p>
+              <Link href="/about" className="inline-block bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 text-white text-xs font-semibold tracking-[0.24em] uppercase px-10 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-rose-300/50 hover:shadow-xl hover:shadow-rose-300/60 hover:-translate-y-0.5">
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -77,11 +81,11 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Salon</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
-              <Image src="/images/Gorgeous/oursalon.jpg" alt="Our Salon" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="img-zoom relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
+              <Image src="/images/Gorgeous/oursalon.jpg" alt="Our Salon" fill className="object-cover hover:scale-108 transition-transform duration-700" />
             </div>
-            <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
-              <Image src="/images/Gorgeous/oursalon2.jpg" alt="Our Salon Interior" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="img-zoom relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
+              <Image src="/images/Gorgeous/oursalon2.jpg" alt="Our Salon Interior" fill className="object-cover hover:scale-108 transition-transform duration-700" />
             </div>
           </div>
         </div>
@@ -89,15 +93,16 @@ export default function HomePage() {
 
       <TestimonialSlider />
 
-      <section className="py-20 bg-gradient-to-r from-rose-700 via-rose-600 to-rose-500 text-white text-center">
-        <div className="max-w-2xl mx-auto px-4">
+      <section className="py-20 bg-gradient-to-r from-rose-700 via-rose-600 to-rose-500 text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)]" />
+        <div className="max-w-2xl mx-auto px-4 relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Ready for a Gorgeous Makeover?</h2>
-          <p className="text-rose-100 mb-8">Visit us today or call to book your appointment</p>
+          <p className="text-rose-100 mb-10 text-lg">Visit us today or call to book your appointment</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919822186362" className="bg-white text-rose-700 text-xs font-semibold tracking-[0.2em] uppercase px-8 py-3 rounded-full hover:bg-rose-50 transition-colors">
+            <a href="tel:+919822186362" className="bg-white text-rose-700 text-xs font-semibold tracking-[0.2em] uppercase px-10 py-4 rounded-full hover:bg-rose-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
               Call Us Now
             </a>
-            <Link href="/contacts" className="border-2 border-white text-white text-xs font-semibold tracking-[0.2em] uppercase px-8 py-3 rounded-full hover:bg-white hover:text-rose-700 transition-colors">
+            <Link href="/contacts" className="border-2 border-white text-white text-xs font-semibold tracking-[0.2em] uppercase px-10 py-4 rounded-full hover:bg-white hover:text-rose-700 transition-all duration-300 hover:-translate-y-0.5">
               Get Directions
             </Link>
           </div>

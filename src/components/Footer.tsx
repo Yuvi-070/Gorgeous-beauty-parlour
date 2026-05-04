@@ -20,26 +20,30 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <h3 className="text-white font-semibold text-lg mb-4 font-serif">Quick Links</h3>
-          <ul className="space-y-2">
+          <h3 className="text-white font-semibold text-lg mb-5 font-serif">Quick Links</h3>
+          <ul className="space-y-3">
             {[{href:"/",l:"Home"},{href:"/about",l:"About Us"},{href:"/amenities",l:"Amenities"},{href:"/contacts",l:"Contact"}].map(({href,l}) => (
-              <li key={href}><Link href={href} className="text-sm hover:text-rose-300 transition-colors duration-200">{l}</Link></li>
+              <li key={href}>
+                <Link href={href} className="nav-link text-sm text-gray-400 hover:text-rose-300 transition-colors duration-300">
+                  {l}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
         <div className="flex flex-col items-center">
-          <h3 className="text-white font-semibold text-lg mb-4 font-serif">Contact</h3>
+          <h3 className="text-white font-semibold text-lg mb-5 font-serif">Contact</h3>
           <address className="not-italic text-sm text-gray-400 space-y-2 text-center">
-            <p>Shop no 18, Jai Ganesh Samrajya, G wing,<br />behind HDFC ATM, Indrayani Nagar,<br />Bhosari, Pune - 411039</p>
-            <p><a href="tel:+919822186362" className="hover:text-rose-300 transition-colors duration-200">+91 9822186362</a></p>
-            <p><a href="tel:+917219636275" className="hover:text-rose-300 transition-colors duration-200">+91 7219636275</a></p>
-            <p><a href="mailto:truptitale305@gmail.com" className="hover:text-rose-300 transition-colors duration-200">truptitale305@gmail.com</a></p>
+            <p className="leading-relaxed">Shop no 18, Jai Ganesh Samrajya, G wing,<br />behind HDFC ATM, Indrayani Nagar,<br />Bhosari, Pune - 411039</p>
+            <p><a href="tel:+919822186362" className="hover:text-rose-300 transition-colors duration-300">+91 9822186362</a></p>
+            <p><a href="tel:+917219636275" className="hover:text-rose-300 transition-colors duration-300">+91 7219636275</a></p>
+            <p><a href="mailto:truptitale305@gmail.com" className="hover:text-rose-300 transition-colors duration-300">truptitale305@gmail.com</a></p>
           </address>
         </div>
       </div>
-      <div className="border-t border-rose-100/20 py-4 text-center text-xs text-gray-500">
+      <div className="border-t border-rose-100/20 py-5 text-center text-xs text-gray-500">
         <p>&copy; {new Date().getFullYear()} Gorgeous Beauty Parlour. All rights reserved.</p>
-        <p className="mt-1">Designed by <a href="https://www.linkedin.com/in/yuvraj-tale-m0705/" target="_blank" rel="noopener noreferrer" className="text-rose-300 hover:text-rose-200">Yuvraj Tale</a></p>
+        <p className="mt-1">Designed by <a href="https://www.linkedin.com/in/yuvraj-tale-m0705/" target="_blank" rel="noopener noreferrer" className="text-rose-300 hover:text-rose-200 transition-colors duration-300">Yuvraj Tale</a></p>
       </div>
     </footer>
   );

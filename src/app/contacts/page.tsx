@@ -20,9 +20,9 @@ export default function ContactsPage() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-10 section-heading mx-auto">
               Contact Information
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
-              <div className="flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-5 shadow-sm">
-                <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left max-w-3xl mx-auto">
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
                   <span className="text-rose-600 text-xl">&#128205;</span>
                 </div>
                 <div>
@@ -35,29 +35,29 @@ export default function ContactsPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-5 shadow-sm">
-                <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
                   <span className="text-rose-600 text-xl">&#128222;</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
-                  <p><a href="tel:+919822186362" className="text-rose-600 hover:text-rose-700 text-sm">+91 9822186362</a></p>
-                  <p><a href="tel:+917219636275" className="text-rose-600 hover:text-rose-700 text-sm">+91 7219636275</a></p>
+                  <p><a href="tel:+919822186362" className="text-rose-600 hover:text-rose-700 text-sm transition-colors duration-300">+91 9822186362</a></p>
+                  <p><a href="tel:+917219636275" className="text-rose-600 hover:text-rose-700 text-sm transition-colors duration-300">+91 7219636275</a></p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-5 shadow-sm">
-                <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
                   <span className="text-rose-600 text-xl">&#9993;&#65039;</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                  <a href="mailto:truptitale305@gmail.com" className="text-rose-600 hover:text-rose-700 text-sm">truptitale305@gmail.com</a>
+                  <a href="mailto:truptitale305@gmail.com" className="text-rose-600 hover:text-rose-700 text-sm transition-colors duration-300">truptitale305@gmail.com</a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-5 shadow-sm">
-                <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
                   <span className="text-rose-600 text-xl">&#128336;</span>
                 </div>
                 <div>
@@ -107,7 +107,7 @@ export default function ContactsPage() {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                 <textarea id="message" rows={4} className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Tell us how we can help..."></textarea>
               </div>
-              <button type="submit" className="w-full bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.24em] uppercase py-3.5 rounded-full transition-colors duration-300 shadow-lg shadow-rose-200/40">
+              <button type="submit" className="w-full bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 text-white text-xs font-semibold tracking-[0.24em] uppercase py-4 rounded-full transition-all duration-300 shadow-lg shadow-rose-200/40 hover:shadow-xl hover:shadow-rose-300/50 hover:-translate-y-0.5">
                 Send Message
               </button>
             </form>

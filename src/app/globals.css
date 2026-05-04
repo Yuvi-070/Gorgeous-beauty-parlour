@@ -12,6 +12,7 @@
   --surface-alt: #fdf6f4;
   --border: rgba(183, 123, 153, 0.25);
   --shadow: 0 30px 60px -40px rgba(31, 26, 29, 0.55);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -28,13 +29,16 @@ body {
   font-family: 'Lato', sans-serif;
   color: var(--secondary);
   background: var(--surface-alt);
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
+  line-height: 1.3;
 }
 
+/* ─── Section Heading with centered underline ─── */
 .section-heading {
   position: relative;
   display: inline-block;
@@ -47,21 +51,25 @@ h1, h2, h3, h4 {
   width: 72px;
   height: 3px;
   background: linear-gradient(90deg, var(--primary), var(--primary-light));
-  margin: 0.5rem auto 0;
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
 }
 
+/* ─── Glassmorphism panel ─── */
 .glass-panel {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(18px);
 }
 
+/* ─── Soft card ─── */
 .soft-card {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
+/* ─── No scrollbar ─── */
 .no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -71,6 +79,7 @@ h1, h2, h3, h4 {
   display: none;
 }
 
+/* ─── Animations ─── */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -81,6 +90,11 @@ h1, h2, h3, h4 {
   to { opacity: 1; }
 }
 
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to { background-position: 200% center; }
+}
+
 .fade-in-up {
   animation: fadeInUp 0.7s ease forwards;
 }
@@ -89,6 +103,7 @@ h1, h2, h3, h4 {
   animation: fadeIn 0.7s ease forwards;
 }
 
+/* ─── Stats / counter background ─── */
 .counter-section {
   background-image: url('/images/Gorgeous/oursalon.jpg');
   background-size: cover;
@@ -96,6 +111,7 @@ h1, h2, h3, h4 {
   background-attachment: fixed;
 }
 
+/* ─── Hero slide transitions ─── */
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -110,4 +126,120 @@ h1, h2, h3, h4 {
 .hero-slide.inactive {
   opacity: 0;
   z-index: 0;
+}
+
+/* ─── Button micro-interactions ─── */
+/* Scope to interactive non-form elements to avoid cascade conflicts with inputs */
+a,
+button:not([type="submit"]):not([type="reset"]) {
+  transition: all var(--transition-base);
+}
+
+/* Form submit buttons get their own explicit transition */
+button[type="submit"] {
+  transition: background var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+/* Gradient CTA button utility */
+.btn-primary {
+  background: linear-gradient(135deg, #e11d48, #be185d);
+  color: white;
+  padding: 0.75rem 2.25rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px -4px rgba(225, 29, 72, 0.35);
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #be185d, #9f1239);
+  box-shadow: 0 12px 32px -4px rgba(225, 29, 72, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ─── Form input enhancements ─── */
+input, select, textarea {
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #fb7185;
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.2);
+}
+
+/* ─── Link hover underline animation ─── */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e11d48;
+  transition: width var(--transition-base);
+  border-radius: 1px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Card hover lift ─── */
+.card-hover {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -8px rgba(31, 26, 29, 0.2);
+}
+
+/* ─── Image overlay zoom on hover ─── */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.08);
+}
+
+/* ─── Stat card glow on hover ─── */
+.stat-card {
+  transition: background var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+
+/* ─── Carousel arrow button ─── */
+.carousel-arrow {
+  transition: background var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.carousel-arrow:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.25);
+}
+
+/* ─── Mobile responsive typography ─── */
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
 }
