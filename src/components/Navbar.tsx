@@ -39,12 +39,12 @@ export default function Navbar() {
           </div>
         </Link>
         
-        <nav className="hidden md:flex items-center gap-9">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-xs font-semibold tracking-[0.2em] uppercase transition-colors duration-200 hover:text-rose-700 ${
+              className={`nav-link text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 hover:text-rose-600 ${
                 pathname === link.href ? "text-rose-700 border-b-2 border-rose-500 pb-1" : "text-gray-700"
               }`}
             >
@@ -53,7 +53,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contacts"
-            className="bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.24em] uppercase px-7 py-2.5 rounded-full transition-colors duration-200 shadow-lg shadow-rose-200/50"
+            className="bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 text-white text-xs font-semibold tracking-[0.24em] uppercase px-7 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-rose-200/50 hover:shadow-xl hover:shadow-rose-300/50 hover:-translate-y-0.5"
           >
             Book Now
           </Link>

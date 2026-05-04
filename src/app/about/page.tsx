@@ -48,9 +48,9 @@ export default function AboutPage() {
               <Image src="/images/Gorgeous/who_we_are2.jpg" alt="Our Team" fill className="object-cover" />
             </div>
           </div>
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Our Story</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading">Who We Are</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Gorgeous Beauty Parlour is a premium beauty destination in Bhosari, Pune, dedicated to enhancing your natural beauty. With a passionate team of skilled beauty professionals, we provide personalized services that cater to your unique needs.
             </p>
@@ -66,9 +66,9 @@ export default function AboutPage() {
 
       <section className="py-24 bg-rose-50/70">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Meet The Owner</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading">Our Founder</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Our Founder</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Our founder brings years of expertise and a genuine passion for beauty and wellness. With extensive training in the latest beauty techniques and a commitment to excellence, she has built Gorgeous Beauty Parlour into a trusted name in Pune.
             </p>

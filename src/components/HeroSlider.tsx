@@ -51,14 +51,14 @@ export default function HeroSlider() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-5">
-            <span className="text-rose-200 text-xs tracking-[0.4em] uppercase mb-4 font-light">Beauty & Wellness</span>
+            <span className="text-rose-200 text-xs tracking-[0.4em] uppercase mb-5 font-light animate-pulse">Beauty & Wellness</span>
             <h1 className="text-white text-4xl md:text-6xl font-serif font-bold mb-5 drop-shadow-xl max-w-4xl leading-tight">
               {slide.title}
             </h1>
-            <p className="text-gray-100 text-lg md:text-xl mb-9 max-w-2xl">{slide.subtitle}</p>
+            <p className="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed">{slide.subtitle}</p>
             <Link
               href={slide.href}
-              className="bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold tracking-[0.2em] uppercase px-9 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-xl shadow-rose-500/30"
+              className="bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 text-white text-sm font-semibold tracking-[0.2em] uppercase px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 shadow-2xl shadow-rose-700/40 hover:shadow-rose-700/60"
             >
               {slide.cta}
             </Link>
