@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Carousel from "@/components/Carousel";
 
 const haircuts = [
   { name: "Straight Cut", image: "/images/Gorgeous/haircut/straight.jpg" },
@@ -41,13 +42,13 @@ const spas = [
 
 function AmenityCard({ name, image }: { name: string; image: string }) {
   return (
-    <div className="group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 bg-white">
+    <div className="group overflow-hidden rounded-2xl border border-rose-100/80 shadow-lg shadow-rose-100/40 hover:shadow-2xl hover:shadow-rose-200/50 transition-all duration-300 bg-white/95">
       <div className="relative h-48 overflow-hidden">
         <Image src={image} alt={name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      <div className="p-3 text-center">
-        <h3 className="text-gray-800 font-semibold text-sm font-serif">{name}</h3>
+      <div className="p-4 text-center">
+        <h3 className="text-gray-900 font-semibold text-sm font-serif">{name}</h3>
       </div>
     </div>
   );
@@ -56,48 +57,48 @@ function AmenityCard({ name, image }: { name: string; image: string }) {
 export default function AmenitiesPage() {
   return (
     <>
-      <div className="relative h-56 md:h-72 bg-pink-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-800 to-rose-900 flex items-center justify-center">
+      <div className="relative h-60 md:h-80 bg-pink-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rose-900/70 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">Amenities</h1>
-            <p className="text-pink-200 text-sm"><Link href="/" className="hover:text-white">Home</Link> / Amenities</p>
+            <p className="text-rose-100 text-sm"><Link href="/" className="hover:text-white">Home</Link> / Amenities</p>
           </div>
         </div>
       </div>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-24 bg-white/90">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-pink-500 text-sm tracking-widest uppercase mb-2">Styling & Cutting</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 section-heading mx-auto">Hair Cuts</h2>
+            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Styling & Cutting</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Hair Cuts</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <Carousel itemClassName="basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-[20%]">
             {haircuts.map((h) => <AmenityCard key={h.name} name={h.name} image={h.image} />)}
-          </div>
+          </Carousel>
         </div>
       </section>
 
-      <section className="py-20 bg-pink-50">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-24 bg-rose-50/70">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-pink-500 text-sm tracking-widest uppercase mb-2">Skin Care</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 section-heading mx-auto">Facial Treatments</h2>
+            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Skin Care</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Facial Treatments</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <Carousel itemClassName="basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-[20%]">
             {facials.map((f) => <AmenityCard key={f.name} name={f.name} image={f.image} />)}
-          </div>
+          </Carousel>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-24 bg-white/90">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-pink-500 text-sm tracking-widest uppercase mb-2">Relaxation</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 section-heading mx-auto">SPA Treatments</h2>
+            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Relaxation</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">SPA Treatments</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <Carousel itemClassName="basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
             {spas.map((s) => <AmenityCard key={s.name} name={s.name} image={s.image} />)}
-          </div>
+          </Carousel>
         </div>
       </section>
     </>

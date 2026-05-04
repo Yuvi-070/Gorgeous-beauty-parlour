@@ -23,23 +23,38 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 border-b border-pink-100/60 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-white/95 shadow-md py-2" : "bg-white/80 py-3"}`}>
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/Gorgeouslogo.png" alt="Gorgeous Beauty Parlour" width={120} height={50} className="h-12 w-auto object-contain" />
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${
+        scrolled ? "bg-white/95 shadow-lg shadow-rose-100/40 border-rose-100/80 py-2" : "bg-white/70 border-transparent py-3"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-md ring-1 ring-rose-100">
+            <Image src="/images/Gorgeouslogo.png" alt="Gorgeous Beauty Parlour" width={40} height={40} className="h-9 w-auto object-contain" />
+          </div>
+          <div className="hidden sm:flex flex-col leading-tight">
+            <span className="text-sm font-semibold tracking-[0.32em] uppercase text-gray-900">Gorgeous</span>
+            <span className="text-[0.6rem] tracking-[0.35em] uppercase text-rose-500">Beauty Parlour</span>
+          </div>
         </Link>
         
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-9">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-semibold tracking-wider uppercase transition-colors duration-200 hover:text-pink-600 ${pathname === link.href ? "text-pink-600 border-b-2 border-pink-600 pb-1" : "text-gray-700"}`}
+              className={`text-xs font-semibold tracking-[0.2em] uppercase transition-colors duration-200 hover:text-rose-700 ${
+                pathname === link.href ? "text-rose-700 border-b-2 border-rose-500 pb-1" : "text-gray-700"
+              }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/contacts" className="bg-pink-600 hover:bg-pink-700 text-white text-sm font-bold px-5 py-2 rounded-full transition-colors duration-200">
+          <Link
+            href="/contacts"
+            className="bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.24em] uppercase px-7 py-2.5 rounded-full transition-colors duration-200 shadow-lg shadow-rose-200/50"
+          >
             Book Now
           </Link>
         </nav>
@@ -52,17 +67,24 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-rose-100 px-4 py-5 flex flex-col gap-4 shadow-lg rounded-b-2xl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className={`text-sm font-semibold tracking-wider uppercase ${pathname === link.href ? "text-pink-600" : "text-gray-700"}`}
+              className={`text-xs font-semibold tracking-[0.2em] uppercase ${pathname === link.href ? "text-rose-700" : "text-gray-700"}`}
             >
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/contacts"
+            onClick={() => setOpen(false)}
+            className="bg-rose-600 text-white text-xs font-semibold tracking-[0.24em] uppercase px-5 py-2.5 rounded-full text-center shadow-lg shadow-rose-200/50"
+          >
+            Book Now
+          </Link>
         </div>
       )}
     </header>

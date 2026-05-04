@@ -36,7 +36,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <div className="relative h-[90vh] min-h-[500px] overflow-hidden bg-gray-900">
+    <div className="relative h-[92vh] min-h-[560px] overflow-hidden bg-neutral-950">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -49,12 +49,17 @@ export default function HeroSlider() {
             className="object-cover"
             priority={i === 0}
           />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
-            <span className="text-pink-300 text-sm tracking-[0.3em] uppercase mb-3 font-light">Beauty & Wellness</span>
-            <h1 className="text-white text-4xl md:text-6xl font-serif font-bold mb-4 drop-shadow-lg max-w-3xl">{slide.title}</h1>
-            <p className="text-gray-200 text-lg md:text-xl mb-8">{slide.subtitle}</p>
-            <Link href={slide.href} className="bg-pink-600 hover:bg-pink-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-5">
+            <span className="text-rose-200 text-xs tracking-[0.4em] uppercase mb-4 font-light">Beauty & Wellness</span>
+            <h1 className="text-white text-4xl md:text-6xl font-serif font-bold mb-5 drop-shadow-xl max-w-4xl leading-tight">
+              {slide.title}
+            </h1>
+            <p className="text-gray-100 text-lg md:text-xl mb-9 max-w-2xl">{slide.subtitle}</p>
+            <Link
+              href={slide.href}
+              className="bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold tracking-[0.2em] uppercase px-9 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-xl shadow-rose-500/30"
+            >
               {slide.cta}
             </Link>
           </div>
@@ -65,13 +70,25 @@ export default function HeroSlider() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${i === current ? "bg-pink-500 w-8" : "bg-white/60"}`}
+            className={`h-2.5 rounded-full transition-all duration-300 ${i === current ? "bg-rose-400 w-10" : "bg-white/60 w-2.5"}`}
             aria-label={`Slide ${i + 1}`}
           />
         ))}
       </div>
-      <button onClick={() => setCurrent((c) => (c - 1 + slides.length) % slides.length)} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-colors" aria-label="Previous">&#8249;</button>
-      <button onClick={() => setCurrent((c) => (c + 1) % slides.length)} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-colors" aria-label="Next">&#8250;</button>
+      <button
+        onClick={() => setCurrent((c) => (c - 1 + slides.length) % slides.length)}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
+        aria-label="Previous"
+      >
+        &#8249;
+      </button>
+      <button
+        onClick={() => setCurrent((c) => (c + 1) % slides.length)}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
+        aria-label="Next"
+      >
+        &#8250;
+      </button>
     </div>
   );
 }
