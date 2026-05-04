@@ -2,11 +2,16 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #c85b8a;
-  --primary-dark: #a0416b;
-  --primary-light: #f0b8d0;
-  --secondary: #2d2d2d;
-  --accent: #f9e4ee;
+  --primary: #b76b8e;
+  --primary-dark: #8e4568;
+  --primary-light: #f5d6e4;
+  --secondary: #1f1a1d;
+  --accent: #fff3f7;
+  --muted: #6f5d67;
+  --surface: #ffffff;
+  --surface-alt: #fdf6f4;
+  --border: rgba(183, 123, 153, 0.25);
+  --shadow: 0 30px 60px -40px rgba(31, 26, 29, 0.55);
 }
 
 * {
@@ -22,7 +27,8 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   color: var(--secondary);
-  background: #fff;
+  background: var(--surface-alt);
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4 {
@@ -38,10 +44,22 @@ h1, h2, h3, h4 {
 .section-heading::after {
   content: '';
   display: block;
-  width: 60px;
+  width: 72px;
   height: 3px;
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
   margin: 0.5rem auto 0;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(18px);
+}
+
+.soft-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 @keyframes fadeInUp {

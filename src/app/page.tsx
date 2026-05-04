@@ -30,11 +30,11 @@ export default function HomePage() {
     <>
       <HeroSlider />
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-24 bg-white/90">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <p className="text-pink-500 text-sm tracking-widest uppercase mb-2">About Us</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-6 section-heading">
+            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">About Us</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading leading-tight">
               Welcome to Gorgeous Beauty Parlour
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -43,23 +43,23 @@ export default function HomePage() {
             <p className="text-gray-600 leading-relaxed mb-6">
               From advanced hair treatments and professional makeup to luxurious facials and spa therapies, our skilled team ensures you leave feeling rejuvenated and beautiful.
             </p>
-            <Link href="/about" className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold px-8 py-3 rounded-full transition-colors duration-300">
+            <Link href="/about" className="inline-block bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.2em] uppercase px-9 py-3 rounded-full transition-colors duration-300 shadow-lg shadow-rose-200/50">
               Learn More
             </Link>
           </div>
-          <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/60">
             <Image src="/images/Gorgeous/why-choose.jpg" alt="Why Choose Gorgeous" fill className="object-cover" />
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-pink-50">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-24 bg-rose-50/70">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-pink-500 text-sm tracking-widest uppercase mb-2">What We Offer</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 section-heading mx-auto">Our Services</h2>
+            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
             {services.map((s) => (
               <ServiceCard key={s.title} title={s.title} image={s.image} />
             ))}
@@ -69,17 +69,17 @@ export default function HomePage() {
 
       <StatsCounter />
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-24 bg-white/90">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-pink-500 text-sm tracking-widest uppercase mb-2">Our Space</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 section-heading mx-auto">Our Salon</h2>
+            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Our Space</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Salon</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative h-72 rounded-xl overflow-hidden shadow-lg">
+            <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
               <Image src="/images/Gorgeous/oursalon.jpg" alt="Our Salon" fill className="object-cover hover:scale-105 transition-transform duration-500" />
             </div>
-            <div className="relative h-72 rounded-xl overflow-hidden shadow-lg">
+            <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
               <Image src="/images/Gorgeous/oursalon2.jpg" alt="Our Salon Interior" fill className="object-cover hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
@@ -88,15 +88,15 @@ export default function HomePage() {
 
       <TestimonialSlider />
 
-      <section className="py-16 bg-pink-700 text-white text-center">
+      <section className="py-20 bg-gradient-to-r from-rose-700 via-rose-600 to-rose-500 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Ready for a Gorgeous Makeover?</h2>
-          <p className="text-pink-100 mb-8">Visit us today or call to book your appointment</p>
+          <p className="text-rose-100 mb-8">Visit us today or call to book your appointment</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919822186362" className="bg-white text-pink-700 font-bold px-8 py-3 rounded-full hover:bg-pink-50 transition-colors">
+            <a href="tel:+919822186362" className="bg-white text-rose-700 text-xs font-semibold tracking-[0.2em] uppercase px-8 py-3 rounded-full hover:bg-rose-50 transition-colors">
               Call Us Now
             </a>
-            <Link href="/contacts" className="border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-pink-700 transition-colors">
+            <Link href="/contacts" className="border-2 border-white text-white text-xs font-semibold tracking-[0.2em] uppercase px-8 py-3 rounded-full hover:bg-white hover:text-rose-700 transition-colors">
               Get Directions
             </Link>
           </div>
