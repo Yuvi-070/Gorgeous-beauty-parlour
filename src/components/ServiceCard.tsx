@@ -24,7 +24,7 @@ export default function ServiceCard({ title, image, desc }: Props) {
           {title}
         </h3>
         {desc && (
-          <p className="text-rose-100 text-base mt-3 max-w-lg mx-auto leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
+          <p className="text-rose-100 text-base mt-3 max-w-lg mx-auto leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
             {desc}
           </p>
         )}

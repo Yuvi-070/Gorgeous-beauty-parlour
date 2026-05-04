@@ -129,8 +129,15 @@ h1, h2, h3, h4 {
 }
 
 /* ─── Button micro-interactions ─── */
-button, a {
+/* Scope to interactive non-form elements to avoid cascade conflicts with inputs */
+a,
+button:not([type="submit"]):not([type="reset"]) {
   transition: all var(--transition-base);
+}
+
+/* Form submit buttons get their own explicit transition */
+button[type="submit"] {
+  transition: background var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 /* Gradient CTA button utility */
