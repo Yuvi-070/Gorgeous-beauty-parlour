@@ -61,9 +61,9 @@ export default function TestimonialSlider() {
               />
             </div>
 
-            <div className="flex gap-1 mb-5">
+            <div className="flex gap-1 mb-5" role="img" aria-label="Rating: 5 out of 5 stars">
               {[1, 2, 3, 4, 5].map((s) => (
-                <span key={s} className="text-amber-400 text-xl">&#9733;</span>
+                <span key={s} className="text-amber-400 text-xl" aria-hidden="true">&#9733;</span>
               ))}
             </div>
 

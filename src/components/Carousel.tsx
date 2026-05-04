@@ -30,7 +30,11 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
     <div className={`relative ${className}`}>
       {/* Slide area */}
       <div className="relative">
-        <div className={`transition-opacity duration-300 ${animating ? "opacity-0" : "opacity-100"}`}>
+        <div
+          className={`transition-opacity duration-300 ${animating ? "opacity-0" : "opacity-100"}`}
+          aria-live="polite"
+          aria-atomic="true"
+        >
           {items[current]}
         </div>
 

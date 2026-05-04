@@ -23,7 +23,7 @@ export default function ServiceCard({ title, image, desc }: Props) {
           {title}
         </h3>
         {desc && (
-          <p className="text-gray-200 text-base mt-3 max-w-lg mx-auto leading-relaxed">
+          <p className="text-white text-base mt-3 max-w-lg mx-auto leading-relaxed">
             {desc}
           </p>
         )}

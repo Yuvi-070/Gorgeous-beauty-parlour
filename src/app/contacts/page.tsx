@@ -78,25 +78,25 @@ export default function ContactsPage() {
             <form className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                  <input type="text" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Jane" />
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                  <input id="firstName" type="text" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Jane" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                  <input type="text" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Doe" />
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                  <input id="lastName" type="text" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Doe" />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input type="email" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="jane@example.com" />
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input id="email" type="email" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="jane@example.com" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                <input type="tel" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="+91 XXXXXXXXXX" />
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                <input id="phone" type="tel" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="+91 XXXXXXXXXX" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Service</label>
-                <select className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition">
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service</label>
+                <select id="service" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition">
                   <option value="">Select a service</option>
                   {["Advance Hair-Cut","Facial","SPA","Body Wax","Professional Make-Up","Hair Extension","Bridal","Hair Coloring","Hair Styling","Chemical Treatments","Advance Manicures & Pedicures","Body Polishing","Re-Bonding","Smoothening","Keratin Treatment","Botox","Nano Plastic Treatment"].map(s => (
                     <option key={s} value={s}>{s}</option>
@@ -104,8 +104,8 @@ export default function ContactsPage() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea rows={4} className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Tell us how we can help..."></textarea>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea id="message" rows={4} className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Tell us how we can help..."></textarea>
               </div>
               <button type="submit" className="w-full bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.24em] uppercase py-3.5 rounded-full transition-colors duration-300 shadow-lg shadow-rose-200/40">
                 Send Message
