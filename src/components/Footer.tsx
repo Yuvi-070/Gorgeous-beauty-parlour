@@ -4,13 +4,13 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#1e1a1c] text-gray-300 border-t border-rose-100/20">
-      <div className="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-        <div className="flex flex-col items-center md:items-start">
+      <div className="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        <div className="flex flex-col items-center">
           <div className="flex items-center gap-3 mb-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10">
               <Image src="/images/Gorgeouslogo.png" alt="Gorgeous Beauty Parlour" width={40} height={40} className="h-9 w-auto object-contain brightness-200" />
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <p className="text-sm font-semibold tracking-[0.3em] uppercase text-white">Gorgeous</p>
               <p className="text-[0.6rem] tracking-[0.35em] uppercase text-rose-200">Beauty Parlour</p>
             </div>
@@ -19,7 +19,7 @@ export default function Footer() {
             Professional beauty parlour offering premium hair, skin, and wellness treatments in Bhosari, Pune.
           </p>
         </div>
-        <div className="text-center md:text-left flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center">
           <h3 className="text-white font-semibold text-lg mb-4 font-serif">Quick Links</h3>
           <ul className="space-y-2">
             {[{href:"/",l:"Home"},{href:"/about",l:"About Us"},{href:"/amenities",l:"Amenities"},{href:"/contacts",l:"Contact"}].map(({href,l}) => (
@@ -27,9 +27,9 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="text-center md:text-left flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center">
           <h3 className="text-white font-semibold text-lg mb-4 font-serif">Contact</h3>
-          <address className="not-italic text-sm text-gray-400 space-y-2">
+          <address className="not-italic text-sm text-gray-400 space-y-2 text-center">
             <p>Shop no 18, Jai Ganesh Samrajya, G wing,<br />behind HDFC ATM, Indrayani Nagar,<br />Bhosari, Pune - 411039</p>
             <p><a href="tel:+919822186362" className="hover:text-rose-300 transition-colors duration-200">+91 9822186362</a></p>
             <p><a href="tel:+917219636275" className="hover:text-rose-300 transition-colors duration-200">+91 7219636275</a></p>
