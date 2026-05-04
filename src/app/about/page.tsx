@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Carousel from "@/components/Carousel";
 
 const services = [
   { title: "Advance Hair-Cut", image: "/images/Gorgeous/advance-haircut.jpg", desc: "Expert haircuts tailored to your face shape and style." },
@@ -46,7 +47,7 @@ export default function AboutPage() {
               <Image src="/images/Gorgeous/who_we_are2.jpg" alt="Our Team" fill className="object-cover" />
             </div>
           </div>
-          <div>
+          <div className="text-center md:text-left">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Our Story</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -64,7 +65,7 @@ export default function AboutPage() {
 
       <section className="py-24 bg-rose-50/70">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
-          <div>
+          <div className="text-center md:text-left">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Meet The Owner</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading">Our Founder</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -86,9 +87,9 @@ export default function AboutPage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+          <Carousel itemClassName="basis-[85%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
             {services.map((s) => (
-              <div key={s.title} className="group overflow-hidden rounded-2xl border border-rose-100/80 shadow-lg shadow-rose-100/40 hover:shadow-2xl hover:shadow-rose-200/50 transition-all duration-300 bg-white/95">
+              <div key={s.title} className="group overflow-hidden rounded-2xl border border-rose-100/80 shadow-lg shadow-rose-100/40 hover:shadow-2xl hover:shadow-rose-200/50 transition-all duration-300 bg-white/95 text-center">
                 <div className="relative h-48 overflow-hidden">
                   <Image src={s.image} alt={s.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
@@ -98,7 +99,7 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 
@@ -108,13 +109,13 @@ export default function AboutPage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Certifications</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Certificates</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <Carousel itemClassName="basis-[70%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
             {certificates.map((cert, i) => (
               <div key={i} className="relative h-48 rounded-2xl overflow-hidden shadow-lg shadow-rose-100/40 hover:shadow-2xl transition-shadow">
                 <Image src={cert} alt={`Certificate ${i + 1}`} fill className="object-cover" />
               </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 

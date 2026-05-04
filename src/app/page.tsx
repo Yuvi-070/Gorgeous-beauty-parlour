@@ -2,6 +2,7 @@ import HeroSlider from "@/components/HeroSlider";
 import StatsCounter from "@/components/StatsCounter";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import ServiceCard from "@/components/ServiceCard";
+import Carousel from "@/components/Carousel";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,7 +33,7 @@ export default function HomePage() {
 
       <section className="py-24 bg-white/90">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
-          <div>
+          <div className="text-center md:text-left">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">About Us</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading leading-tight">
               Welcome to Gorgeous Beauty Parlour
@@ -43,7 +44,7 @@ export default function HomePage() {
             <p className="text-gray-600 leading-relaxed mb-6">
               From advanced hair treatments and professional makeup to luxurious facials and spa therapies, our skilled team ensures you leave feeling rejuvenated and beautiful.
             </p>
-            <Link href="/about" className="inline-block bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.2em] uppercase px-9 py-3 rounded-full transition-colors duration-300 shadow-lg shadow-rose-200/50">
+            <Link href="/about" className="inline-block bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold tracking-[0.24em] uppercase px-9 py-3 rounded-full transition-colors duration-300 shadow-lg shadow-rose-200/50">
               Learn More
             </Link>
           </div>
@@ -59,11 +60,11 @@ export default function HomePage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+          <Carousel itemClassName="basis-[85%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
             {services.map((s) => (
               <ServiceCard key={s.title} title={s.title} image={s.image} />
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 

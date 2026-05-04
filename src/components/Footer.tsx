@@ -4,10 +4,18 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#1e1a1c] text-gray-300 border-t border-rose-100/20">
-      <div className="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div>
-          <Image src="/images/Gorgeouslogo.png" alt="Gorgeous Beauty Parlour" width={140} height={60} className="h-14 w-auto object-contain mb-4 brightness-200" />
-          <p className="text-sm text-gray-400 leading-relaxed">
+      <div className="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        <div className="flex flex-col items-center md:items-start">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10">
+              <Image src="/images/Gorgeouslogo.png" alt="Gorgeous Beauty Parlour" width={40} height={40} className="h-9 w-auto object-contain brightness-200" />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="text-sm font-semibold tracking-[0.3em] uppercase text-white">Gorgeous</p>
+              <p className="text-[0.6rem] tracking-[0.35em] uppercase text-rose-200">Beauty Parlour</p>
+            </div>
+          </div>
+          <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
             Professional beauty parlour offering premium hair, skin, and wellness treatments in Bhosari, Pune.
           </p>
         </div>

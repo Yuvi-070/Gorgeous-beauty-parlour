@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Carousel from "@/components/Carousel";
 
 const haircuts = [
   { name: "Straight Cut", image: "/images/Gorgeous/haircut/straight.jpg" },
@@ -71,9 +72,9 @@ export default function AmenitiesPage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Styling & Cutting</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Hair Cuts</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+          <Carousel itemClassName="basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-[20%]">
             {haircuts.map((h) => <AmenityCard key={h.name} name={h.name} image={h.image} />)}
-          </div>
+          </Carousel>
         </div>
       </section>
 
@@ -83,9 +84,9 @@ export default function AmenitiesPage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Skin Care</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Facial Treatments</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+          <Carousel itemClassName="basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-[20%]">
             {facials.map((f) => <AmenityCard key={f.name} name={f.name} image={f.image} />)}
-          </div>
+          </Carousel>
         </div>
       </section>
 
@@ -95,9 +96,9 @@ export default function AmenitiesPage() {
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Relaxation</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">SPA Treatments</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <Carousel itemClassName="basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
             {spas.map((s) => <AmenityCard key={s.name} name={s.name} image={s.image} />)}
-          </div>
+          </Carousel>
         </div>
       </section>
     </>
