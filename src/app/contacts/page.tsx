@@ -13,7 +13,7 @@ export default function ContactsPage() {
       </div>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Contact Info — centered grid */}
           <div className="text-center mb-14">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Get In Touch</p>
@@ -116,7 +116,7 @@ export default function ContactsPage() {
       </section>
 
       <section className="pb-24">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/40">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d375.06084092847664!2d73.84878384771385!3d18.64708686525778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c7f37604cc79%3A0x1993e7b4e4958d69!2sGORGEOUS%20BEAUTY%20PARLOUR!5e0!3m2!1sen!2sin!4v1719766026127!5m2!1sen!2sin"

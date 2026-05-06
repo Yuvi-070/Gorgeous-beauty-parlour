@@ -68,7 +68,7 @@ export default function AmenitiesPage() {
       </div>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Styling & Cutting</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Hair Cuts</h2>
@@ -80,7 +80,7 @@ export default function AmenitiesPage() {
       </section>
 
       <section className="py-24 bg-rose-50/70">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Skin Care</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Facial Treatments</h2>
@@ -92,7 +92,7 @@ export default function AmenitiesPage() {
       </section>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Relaxation</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">SPA Treatments</h2>
