@@ -41,28 +41,28 @@ export default function TestimonialSlider() {
     return () => track.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
     const track = trackRef.current;
     if (!track) return;
-    track.setPointerCapture(e.pointerId);
-    drag.current = { active: true, startX: e.clientX, scrollLeft: track.scrollLeft };
+    track.setPointerCapture(event.pointerId);
+    drag.current = { active: true, startX: event.clientX, scrollLeft: track.scrollLeft };
     track.style.scrollSnapType = "none";
     track.style.cursor = "grabbing";
   };
 
-  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
     if (!drag.current.active || !trackRef.current) return;
     trackRef.current.scrollLeft =
-      drag.current.scrollLeft + (drag.current.startX - e.clientX);
+      drag.current.scrollLeft + (drag.current.startX - event.clientX);
   };
 
-  const stopDrag = (e?: React.PointerEvent<HTMLDivElement>) => {
+  const stopDrag = (event?: React.PointerEvent<HTMLDivElement>) => {
     if (!drag.current.active || !trackRef.current) return;
     drag.current.active = false;
     const track = trackRef.current;
-    if (e) {
+    if (event) {
       try {
-        track.releasePointerCapture(e.pointerId);
+        track.releasePointerCapture(event.pointerId);
       } catch {
         // Pointer may already be released by the browser.
       }
