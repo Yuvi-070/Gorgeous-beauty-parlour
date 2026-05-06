@@ -41,10 +41,13 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
       drag.current.scrollLeft + (drag.current.startX - e.clientX);
   };
 
-  const stopDrag = () => {
+  const stopDrag = (e?: React.PointerEvent<HTMLDivElement>) => {
     if (!drag.current.active || !trackRef.current) return;
     drag.current.active = false;
     const track = trackRef.current;
+    if (e && track.hasPointerCapture(e.pointerId)) {
+      track.releasePointerCapture(e.pointerId);
+    }
     track.style.cursor = "grab";
     const snapIndex = Math.round(track.scrollLeft / track.clientWidth);
     track.style.scrollSnapType = "x mandatory";
