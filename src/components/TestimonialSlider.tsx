@@ -29,6 +29,7 @@ export default function TestimonialSlider() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const drag = useRef({ active: false, startX: 0, scrollLeft: 0 });
+  const SNAP_THRESHOLD = 12;
 
   useEffect(() => {
     const track = trackRef.current;
@@ -56,13 +57,13 @@ export default function TestimonialSlider() {
       drag.current.scrollLeft + (drag.current.startX - event.clientX);
   };
 
-  const stopDrag = (event?: React.PointerEvent<HTMLDivElement>) => {
+  const stopDrag = (pointerEvent?: React.PointerEvent<HTMLDivElement>) => {
     if (!drag.current.active || !trackRef.current) return;
     drag.current.active = false;
     const track = trackRef.current;
-    if (event) {
+    if (pointerEvent) {
       try {
-        track.releasePointerCapture(event.pointerId);
+        track.releasePointerCapture(pointerEvent.pointerId);
       } catch {
         // Pointer may already be released by the browser.
       }
@@ -71,7 +72,7 @@ export default function TestimonialSlider() {
     const snapIndex = Math.round(track.scrollLeft / track.clientWidth);
     track.style.scrollSnapType = "x mandatory";
     const targetLeft = snapIndex * track.clientWidth;
-    if (Math.abs(track.scrollLeft - targetLeft) > 12) {
+    if (Math.abs(track.scrollLeft - targetLeft) > SNAP_THRESHOLD) {
       track.scrollTo({ left: targetLeft, behavior: "smooth" });
     }
   };
