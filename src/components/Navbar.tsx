@@ -28,7 +28,7 @@ export default function Navbar() {
         scrolled ? "bg-white/95 shadow-lg shadow-rose-100/40 border-rose-100/80 py-2" : "bg-white/70 border-transparent py-3"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-md ring-1 ring-rose-100">
             <Image src="/images/Gorgeouslogo.png" alt="Gorgeous Beauty Parlour" width={40} height={40} className="h-9 w-auto object-contain" />

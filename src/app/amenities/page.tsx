@@ -42,7 +42,7 @@ const spas = [
 
 function AmenityCard({ name, image }: { name: string; image: string }) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rose-200/50">
+    <div className="group relative w-full overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rose-200/50">
       <div className="relative h-[420px] w-full overflow-hidden">
         <Image src={image} alt={name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
@@ -68,7 +68,7 @@ export default function AmenitiesPage() {
       </div>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Styling & Cutting</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Hair Cuts</h2>
@@ -80,7 +80,7 @@ export default function AmenitiesPage() {
       </section>
 
       <section className="py-24 bg-rose-50/70">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Skin Care</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Facial Treatments</h2>
@@ -92,7 +92,7 @@ export default function AmenitiesPage() {
       </section>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Relaxation</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">SPA Treatments</h2>

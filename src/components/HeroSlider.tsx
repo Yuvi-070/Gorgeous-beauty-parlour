@@ -65,30 +65,17 @@ export default function HeroSlider() {
           </div>
         </div>
       ))}
+      {/* Dot navigation only — no arrows overlaying the hero image */}
       <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-2.5 rounded-full transition-all duration-300 ${i === current ? "bg-rose-400 w-10" : "bg-white/60 w-2.5"}`}
+            className={`h-2.5 rounded-full transition-all duration-300 ${i === current ? "bg-rose-400 w-10" : "bg-white/60 w-2.5 hover:bg-white/90"}`}
             aria-label={`Slide ${i + 1}`}
           />
         ))}
       </div>
-      <button
-        onClick={() => setCurrent((c) => (c - 1 + slides.length) % slides.length)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
-        aria-label="Previous"
-      >
-        &#8249;
-      </button>
-      <button
-        onClick={() => setCurrent((c) => (c + 1) % slides.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
-        aria-label="Next"
-      >
-        &#8250;
-      </button>
     </div>
   );
 }
