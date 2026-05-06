@@ -48,7 +48,10 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
     track.style.cursor = "grab";
     const snapIndex = Math.round(track.scrollLeft / track.clientWidth);
     track.style.scrollSnapType = "x mandatory";
-    track.scrollTo({ left: snapIndex * track.clientWidth, behavior: "smooth" });
+    const targetLeft = snapIndex * track.clientWidth;
+    if (Math.abs(track.scrollLeft - targetLeft) > 12) {
+      track.scrollTo({ left: targetLeft, behavior: "smooth" });
+    }
   };
 
   const goTo = (index: number) => {
@@ -70,7 +73,6 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
         onPointerMove={onPointerMove}
         onPointerUp={stopDrag}
         onPointerCancel={stopDrag}
-        onPointerLeave={stopDrag}
         aria-live="polite"
         aria-atomic="true"
       >

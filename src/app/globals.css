@@ -35,8 +35,6 @@ body {
   background: var(--surface-alt);
   line-height: 1.7;
   letter-spacing: 0.01em;
-  /* Prevent horizontal overflow globally */
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -237,4 +235,3 @@ input:focus, select:focus, textarea:focus {
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.25rem; }
 }
-

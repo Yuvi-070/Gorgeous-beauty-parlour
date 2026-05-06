@@ -63,7 +63,10 @@ export default function TestimonialSlider() {
     track.style.cursor = "grab";
     const snapIndex = Math.round(track.scrollLeft / track.clientWidth);
     track.style.scrollSnapType = "x mandatory";
-    track.scrollTo({ left: snapIndex * track.clientWidth, behavior: "smooth" });
+    const targetLeft = snapIndex * track.clientWidth;
+    if (Math.abs(track.scrollLeft - targetLeft) > 12) {
+      track.scrollTo({ left: targetLeft, behavior: "smooth" });
+    }
   };
 
   const goTo = (index: number) => {
@@ -89,7 +92,6 @@ export default function TestimonialSlider() {
           onPointerMove={onPointerMove}
           onPointerUp={stopDrag}
           onPointerCancel={stopDrag}
-          onPointerLeave={stopDrag}
         >
           {testimonials.map((t, i) => (
             <div key={i} className="flex-none w-full px-1" style={{ scrollSnapAlign: "start" }}>
