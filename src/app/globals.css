@@ -2,16 +2,20 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #b76b8e;
-  --primary-dark: #8e4568;
-  --primary-light: #f5d6e4;
+  /* ── Rose Gold Premium Palette ── */
+  --rg-gold: #c9a27e;          /* true rose-gold accent */
+  --rg-gold-light: #e8cda8;
+
+  --primary: #c2647a;          /* rose-gold pink */
+  --primary-dark: #9b3f58;
+  --primary-light: #f7dce4;
   --secondary: #1f1a1d;
-  --accent: #fff3f7;
-  --muted: #6f5d67;
+  --accent: #fff5f8;
+  --muted: #7a5f6b;
   --surface: #ffffff;
-  --surface-alt: #fdf6f4;
-  --border: rgba(183, 123, 153, 0.25);
-  --shadow: 0 30px 60px -40px rgba(31, 26, 29, 0.55);
+  --surface-alt: #fdf7f5;
+  --border: rgba(194, 100, 122, 0.22);
+  --shadow: 0 24px 48px -32px rgba(31, 26, 29, 0.45);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -31,6 +35,8 @@ body {
   background: var(--surface-alt);
   line-height: 1.7;
   letter-spacing: 0.01em;
+  /* Prevent horizontal overflow globally */
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -50,7 +56,7 @@ h1, h2, h3, h4 {
   display: block;
   width: 72px;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  background: linear-gradient(90deg, var(--primary), var(--rg-gold));
   margin: 0.6rem auto 0;
   border-radius: 2px;
 }
@@ -129,20 +135,18 @@ h1, h2, h3, h4 {
 }
 
 /* ─── Button micro-interactions ─── */
-/* Scope to interactive non-form elements to avoid cascade conflicts with inputs */
 a,
 button:not([type="submit"]):not([type="reset"]) {
   transition: all var(--transition-base);
 }
 
-/* Form submit buttons get their own explicit transition */
 button[type="submit"] {
   transition: background var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
 }
 
-/* Gradient CTA button utility */
+/* ─── Gradient CTA button — Rose Gold Premium ─── */
 .btn-primary {
-  background: linear-gradient(135deg, #e11d48, #be185d);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
   padding: 0.75rem 2.25rem;
   border-radius: 9999px;
@@ -150,13 +154,13 @@ button[type="submit"] {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  box-shadow: 0 8px 24px -4px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 8px 24px -4px rgba(194, 100, 122, 0.35);
   display: inline-block;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #be185d, #9f1239);
-  box-shadow: 0 12px 32px -4px rgba(225, 29, 72, 0.5);
+  background: linear-gradient(135deg, var(--primary-dark), #7a2e40);
+  box-shadow: 0 12px 32px -4px rgba(194, 100, 122, 0.5);
   transform: translateY(-2px);
 }
 
@@ -167,8 +171,8 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: #fb7185;
-  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.2);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(194, 100, 122, 0.18);
 }
 
 /* ─── Link hover underline animation ─── */
@@ -184,7 +188,7 @@ input:focus, select:focus, textarea:focus {
   left: 0;
   width: 0;
   height: 2px;
-  background: #e11d48;
+  background: var(--primary);
   transition: width var(--transition-base);
   border-radius: 1px;
 }
@@ -227,19 +231,10 @@ input:focus, select:focus, textarea:focus {
   transform: translateY(-4px);
 }
 
-/* ─── Carousel arrow button ─── */
-.carousel-arrow {
-  transition: background var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.carousel-arrow:hover {
-  transform: scale(1.12);
-  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.25);
-}
-
 /* ─── Mobile responsive typography ─── */
 @media (max-width: 640px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.25rem; }
 }
+
