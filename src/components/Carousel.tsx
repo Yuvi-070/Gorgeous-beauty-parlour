@@ -45,8 +45,12 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
     if (!drag.current.active || !trackRef.current) return;
     drag.current.active = false;
     const track = trackRef.current;
-    if (e && track.hasPointerCapture(e.pointerId)) {
-      track.releasePointerCapture(e.pointerId);
+    if (e) {
+      try {
+        track.releasePointerCapture(e.pointerId);
+      } catch {
+        // Pointer may already be released by the browser.
+      }
     }
     track.style.cursor = "grab";
     const snapIndex = Math.round(track.scrollLeft / track.clientWidth);

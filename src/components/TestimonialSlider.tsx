@@ -60,8 +60,12 @@ export default function TestimonialSlider() {
     if (!drag.current.active || !trackRef.current) return;
     drag.current.active = false;
     const track = trackRef.current;
-    if (e && track.hasPointerCapture(e.pointerId)) {
-      track.releasePointerCapture(e.pointerId);
+    if (e) {
+      try {
+        track.releasePointerCapture(e.pointerId);
+      } catch {
+        // Pointer may already be released by the browser.
+      }
     }
     track.style.cursor = "grab";
     const snapIndex = Math.round(track.scrollLeft / track.clientWidth);
@@ -97,7 +101,7 @@ export default function TestimonialSlider() {
           onPointerCancel={stopDrag}
         >
           {testimonials.map((t, i) => (
-            <div key={i} className="flex-none w-full px-1" style={{ scrollSnapAlign: "start" }}>
+            <div key={i} className="flex-none w-full" style={{ scrollSnapAlign: "start" }}>
               <div className="flex flex-col items-center bg-white/95 border border-rose-100/80 rounded-3xl px-6 py-10 md:px-14 md:py-14 shadow-2xl shadow-rose-200/50 relative">
                 <span className="text-8xl text-rose-100 font-serif leading-none absolute top-4 left-6 select-none pointer-events-none">
                   &ldquo;
