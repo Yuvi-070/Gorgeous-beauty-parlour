@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,6 +32,8 @@ body {
   background: var(--surface-alt);
   line-height: 1.7;
   letter-spacing: 0.01em;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {

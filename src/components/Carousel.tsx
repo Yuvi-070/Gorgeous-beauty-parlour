@@ -27,9 +27,9 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
   if (items.length === 0) return null;
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative w-full ${className}`}>
       {/* Slide area */}
-      <div className="relative rounded-3xl overflow-hidden">
+      <div className="relative w-full rounded-3xl overflow-hidden">
         <div
           className={`transition-opacity duration-350 ${animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"} transition-all`}
           aria-live="polite"

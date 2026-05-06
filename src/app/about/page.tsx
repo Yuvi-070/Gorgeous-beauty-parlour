@@ -39,7 +39,7 @@ export default function AboutPage() {
       </div>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center">
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
               <Image src="/images/Gorgeous/who_we_are1.jpg" alt="Who We Are" fill className="object-cover" />
@@ -65,7 +65,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-rose-50/70">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center">
           <div className="text-center">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Meet The Owner</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Our Founder</h2>
@@ -83,7 +83,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
@@ -97,7 +97,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-rose-50/70">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Certifications</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Certificates</h2>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
           <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
             <Image src="/images/Gorgeous/variety1.jpg" alt="Variety of Services 1" fill className="object-cover" />
           </div>

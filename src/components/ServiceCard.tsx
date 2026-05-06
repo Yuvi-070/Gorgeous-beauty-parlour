@@ -8,7 +8,7 @@ interface Props {
 
 export default function ServiceCard({ title, image, desc }: Props) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rose-200/50 card-hover">
+    <div className="group relative w-full overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rose-200/50 card-hover">
       <div className="relative h-[500px] w-full overflow-hidden">
         <Image
           src={image}
