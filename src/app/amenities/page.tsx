@@ -42,7 +42,7 @@ const spas = [
 
 function AmenityCard({ name, image }: { name: string; image: string }) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rose-200/50">
+    <div className="group relative w-full overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rose-200/50">
       <div className="relative h-[420px] w-full overflow-hidden">
         <Image src={image} alt={name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />

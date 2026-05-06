@@ -71,11 +71,11 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
   if (items.length === 0) return null;
 
   return (
-    <div className={className}>
+    <div className={`w-full ${className}`.trim()}>
       {/* Swipe / drag track — no arrow buttons on the image */}
       <div
         ref={trackRef}
-        className="flex overflow-x-auto no-scrollbar select-none rounded-3xl"
+        className="flex w-full overflow-x-auto no-scrollbar select-none rounded-3xl"
         style={{ scrollSnapType: "x mandatory", cursor: "grab" }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
@@ -87,7 +87,7 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
         {items.map((item, i) => (
           <div
             key={i}
-            className="flex-none w-full"
+            className="flex-none w-full min-w-full"
             style={{ scrollSnapAlign: "start" }}
           >
             {item}
