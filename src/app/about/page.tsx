@@ -39,8 +39,8 @@ export default function AboutPage() {
       </div>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center justify-items-center">
+          <div className="grid grid-cols-2 gap-4 w-full max-w-xl">
             <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
               <Image src="/images/Gorgeous/who_we_are1.jpg" alt="Who We Are" fill className="object-cover" />
             </div>
@@ -48,7 +48,7 @@ export default function AboutPage() {
               <Image src="/images/Gorgeous/who_we_are2.jpg" alt="Our Team" fill className="object-cover" />
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center max-w-xl mx-auto">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Our Story</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -65,8 +65,8 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-rg-50/80">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
-          <div className="text-center">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center justify-items-center">
+          <div className="text-center max-w-xl mx-auto">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Meet The Owner</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Our Founder</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -76,7 +76,7 @@ export default function AboutPage() {
               Her dedication to client satisfaction and continuous learning ensures that Gorgeous Beauty Parlour stays at the forefront of beauty trends and techniques.
             </p>
           </div>
-          <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/60">
+          <div className="relative h-96 w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/60">
             <Image src="/images/Gorgeous/owner.jpg" alt="Owner" fill className="object-cover" />
           </div>
         </div>
@@ -113,11 +113,11 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
-          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 justify-items-center">
+          <div className="relative h-64 w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
             <Image src="/images/Gorgeous/variety1.jpg" alt="Variety of Services 1" fill className="object-cover" />
           </div>
-          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
+          <div className="relative h-64 w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
             <Image src="/images/Gorgeous/variety2.jpg" alt="Variety of Services 2" fill className="object-cover" />
           </div>
         </div>

@@ -43,7 +43,11 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
   return (
     <div className={`relative ${className}`}>
       {/* Slide area */}
-      <div className="relative rounded-3xl overflow-hidden touch-pan-y" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      <div
+        className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden touch-pan-y"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
         <div
           className={`transition-all duration-300 ${animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"}`}
           aria-live="polite"
