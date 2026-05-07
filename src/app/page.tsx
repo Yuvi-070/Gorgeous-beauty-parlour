@@ -41,7 +41,13 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <div className="relative h-80 md:h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/60 order-1 md:order-none">
-              <Image src="/images/Gorgeous/why-choose.jpg" alt="Why Choose Gorgeous" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+              <Image
+                src="/images/Gorgeous/why-choose.jpg"
+                alt="Why Choose Gorgeous"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="text-center">
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -82,10 +88,22 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="img-zoom relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
-              <Image src="/images/Gorgeous/oursalon.jpg" alt="Our Salon" fill className="object-cover hover:scale-108 transition-transform duration-700" />
+              <Image
+                src="/images/Gorgeous/oursalon.jpg"
+                alt="Our Salon"
+                fill
+                className="object-cover hover:scale-108 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="img-zoom relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
-              <Image src="/images/Gorgeous/oursalon2.jpg" alt="Our Salon Interior" fill className="object-cover hover:scale-108 transition-transform duration-700" />
+              <Image
+                src="/images/Gorgeous/oursalon2.jpg"
+                alt="Our Salon Interior"
+                fill
+                className="object-cover hover:scale-108 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

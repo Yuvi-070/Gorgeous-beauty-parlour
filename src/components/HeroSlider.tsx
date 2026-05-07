@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,14 +29,30 @@ const slides = [
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 5000);
     return () => clearInterval(timer);
   }, []);
 
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.changedTouches[0]?.clientX ?? null;
+    touchEndX.current = null;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.changedTouches[0]?.clientX ?? null;
+    if (touchStartX.current === null || touchEndX.current === null) return;
+    const delta = touchStartX.current - touchEndX.current;
+    if (Math.abs(delta) < 50) return;
+    if (delta > 0) setCurrent((c) => (c + 1) % slides.length);
+    else setCurrent((c) => (c - 1 + slides.length) % slides.length);
+  };
+
   return (
-    <div className="relative h-[92vh] min-h-[560px] overflow-hidden bg-neutral-950">
+    <div className="relative h-[92vh] min-h-[560px] overflow-hidden bg-neutral-950 touch-pan-y" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -48,6 +64,8 @@ export default function HeroSlider() {
             fill
             className="object-cover"
             priority={i === 0}
+            sizes="100vw"
+            quality={80}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/75" />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-5">

@@ -1,6 +1,6 @@
 "use client";
 
-import { Children, ReactNode, useState } from "react";
+import { Children, ReactNode, useRef, useState } from "react";
 
 interface CarouselProps {
   children: ReactNode;
@@ -11,6 +11,8 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
   const items = Children.toArray(children);
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const go = (idx: number) => {
     if (animating || idx === current) return;
@@ -23,13 +25,25 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
 
   const prev = () => go((current - 1 + items.length) % items.length);
   const next = () => go((current + 1) % items.length);
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.changedTouches[0]?.clientX ?? null;
+    touchEndX.current = null;
+  };
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.changedTouches[0]?.clientX ?? null;
+    if (touchStartX.current === null || touchEndX.current === null) return;
+    const delta = touchStartX.current - touchEndX.current;
+    if (Math.abs(delta) < 50) return;
+    if (delta > 0) next();
+    else prev();
+  };
 
   if (items.length === 0) return null;
 
   return (
     <div className={`relative ${className}`}>
       {/* Slide area */}
-      <div className="relative rounded-3xl overflow-hidden">
+      <div className="relative rounded-3xl overflow-hidden touch-pan-y" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <div
           className={`transition-opacity duration-350 ${animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"} transition-all`}
           aria-live="polite"

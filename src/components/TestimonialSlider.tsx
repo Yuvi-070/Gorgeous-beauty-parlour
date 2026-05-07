@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 const testimonials = [
@@ -28,6 +28,8 @@ const testimonials = [
 export default function TestimonialSlider() {
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const go = (idx: number) => {
     if (animating) return;
@@ -36,6 +38,18 @@ export default function TestimonialSlider() {
       setCurrent(idx);
       setAnimating(false);
     }, 300);
+  };
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.changedTouches[0]?.clientX ?? null;
+    touchEndX.current = null;
+  };
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.changedTouches[0]?.clientX ?? null;
+    if (touchStartX.current === null || touchEndX.current === null) return;
+    const delta = touchStartX.current - touchEndX.current;
+    if (Math.abs(delta) < 50) return;
+    if (delta > 0) go((current + 1) % testimonials.length);
+    else go((current - 1 + testimonials.length) % testimonials.length);
   };
 
   return (
@@ -46,7 +60,11 @@ export default function TestimonialSlider() {
           What Our Clients Say
         </h2>
 
-        <div className={`transition-opacity duration-300 ${animating ? "opacity-0" : "opacity-100"}`}>
+        <div
+          className={`transition-opacity duration-300 touch-pan-y ${animating ? "opacity-0" : "opacity-100"}`}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
           <div className="flex flex-col items-center bg-white/95 border border-rg-100/80 rounded-3xl px-6 py-10 md:px-14 md:py-14 shadow-2xl shadow-rg-200/50 relative">
             <span className="text-8xl text-rg-100 font-serif leading-none absolute top-4 left-6 select-none pointer-events-none">
               &ldquo;
