@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700&display=swap');
 @import "tailwindcss";
 
 /* ─── Rose Gold custom colour palette (Tailwind v4 @theme) ─── */
@@ -18,7 +18,7 @@
 :root {
   --primary: #c9718a;
   --primary-dark: #a85471;
-  --primary-light: #f9cdd7;
+  --primary-light: #f4d5c4;
   --secondary: #2d1520;
   --accent: #fff6f8;
   --muted: #9e7280;
@@ -27,7 +27,6 @@
   --border: rgba(201, 113, 138, 0.25);
   --shadow: 0 30px 60px -40px rgba(45, 21, 32, 0.45);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --gold-light: #f0d49a;
 }
 
 * {
@@ -76,7 +75,7 @@ section, header, footer, main {
   display: block;
   width: 72px;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--gold-light));
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
   margin: 0.6rem auto 0;
   border-radius: 2px;
 }
