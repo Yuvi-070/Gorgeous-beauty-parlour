@@ -13,9 +13,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main className="pt-16">{children}</main>
-        <Footer />
+        <div className="min-h-screen overflow-x-hidden">
+          <Navbar />
+          <main className="pt-16">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
