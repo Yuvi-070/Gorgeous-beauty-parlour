@@ -45,7 +45,7 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
       {/* Slide area */}
       <div className="relative rounded-3xl overflow-hidden touch-pan-y" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <div
-          className={`transition-opacity duration-350 ${animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"} transition-all`}
+          className={`transition-[opacity,transform] duration-350 ${animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"}`}
           aria-live="polite"
           aria-atomic="true"
         >

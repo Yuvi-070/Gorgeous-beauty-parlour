@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -31,11 +31,13 @@ export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
+  const goPrev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
+  const goNext = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 5000);
+    const timer = setInterval(goNext, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [goNext]);
 
   const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     touchStartX.current = e.changedTouches[0]?.clientX ?? null;
@@ -47,8 +49,8 @@ export default function HeroSlider() {
     if (touchStartX.current === null || touchEndX.current === null) return;
     const delta = touchStartX.current - touchEndX.current;
     if (Math.abs(delta) < 50) return;
-    if (delta > 0) setCurrent((c) => (c + 1) % slides.length);
-    else setCurrent((c) => (c - 1 + slides.length) % slides.length);
+    if (delta > 0) goNext();
+    else goPrev();
   };
 
   return (
@@ -94,14 +96,14 @@ export default function HeroSlider() {
         ))}
       </div>
       <button
-        onClick={() => setCurrent((c) => (c - 1 + slides.length) % slides.length)}
+        onClick={goPrev}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
         aria-label="Previous"
       >
         &#8249;
       </button>
       <button
-        onClick={() => setCurrent((c) => (c + 1) % slides.length)}
+        onClick={goNext}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
         aria-label="Next"
       >
