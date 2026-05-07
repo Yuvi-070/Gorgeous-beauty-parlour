@@ -1,17 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;700i&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Lato:wght@300;400;700&display=swap');
 @import "tailwindcss";
 
+/* ─── Rose Gold custom colour palette (Tailwind v4 @theme) ─── */
+@theme {
+  --color-rg-50:  #fff6f8;
+  --color-rg-100: #fde8ed;
+  --color-rg-200: #f9cdd7;
+  --color-rg-300: #f0a5b5;
+  --color-rg-400: #e07a93;
+  --color-rg-500: #c9718a;
+  --color-rg-600: #a85471;
+  --color-rg-700: #8a3d58;
+  --color-rg-800: #6e2940;
+  --color-rg-900: #4e172b;
+}
+
 :root {
-  --primary: #b76b8e;
-  --primary-dark: #8e4568;
-  --primary-light: #f5d6e4;
-  --secondary: #1f1a1d;
-  --accent: #fff3f7;
-  --muted: #6f5d67;
+  --primary: #c9718a;
+  --primary-dark: #a85471;
+  --primary-light: #f4d5c4;
+  --secondary: #2d1520;
+  --accent: #fff6f8;
+  --muted: #9e7280;
   --surface: #ffffff;
-  --surface-alt: #fdf6f4;
-  --border: rgba(183, 123, 153, 0.25);
-  --shadow: 0 30px 60px -40px rgba(31, 26, 29, 0.55);
+  --surface-alt: #fdf8f9;
+  --border: rgba(201, 113, 138, 0.25);
+  --shadow: 0 30px 60px -40px rgba(45, 21, 32, 0.45);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -21,8 +35,10 @@
   padding: 0;
 }
 
+/* ─── Layout fix: prevent left-alignment on deployment ─── */
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
@@ -31,11 +47,18 @@ body {
   background: var(--surface-alt);
   line-height: 1.7;
   letter-spacing: 0.01em;
+  width: 100%;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   line-height: 1.3;
+}
+
+/* Ensure all page wrappers fill full width */
+section, header, footer, main {
+  width: 100%;
 }
 
 /* ─── Section Heading with centered underline ─── */
@@ -142,7 +165,7 @@ button[type="submit"] {
 
 /* Gradient CTA button utility */
 .btn-primary {
-  background: linear-gradient(135deg, #e11d48, #be185d);
+  background: linear-gradient(135deg, var(--primary), #e07a93);
   color: white;
   padding: 0.75rem 2.25rem;
   border-radius: 9999px;
@@ -150,13 +173,13 @@ button[type="submit"] {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  box-shadow: 0 8px 24px -4px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 8px 24px -4px rgba(201, 113, 138, 0.4);
   display: inline-block;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #be185d, #9f1239);
-  box-shadow: 0 12px 32px -4px rgba(225, 29, 72, 0.5);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  box-shadow: 0 12px 32px -4px rgba(201, 113, 138, 0.55);
   transform: translateY(-2px);
 }
 
@@ -167,8 +190,8 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: #fb7185;
-  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.2);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(201, 113, 138, 0.2);
 }
 
 /* ─── Link hover underline animation ─── */
@@ -184,7 +207,7 @@ input:focus, select:focus, textarea:focus {
   left: 0;
   width: 0;
   height: 2px;
-  background: #e11d48;
+  background: var(--primary);
   transition: width var(--transition-base);
   border-radius: 1px;
 }
@@ -234,7 +257,7 @@ input:focus, select:focus, textarea:focus {
 
 .carousel-arrow:hover {
   transform: scale(1.12);
-  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.25);
+  box-shadow: 0 8px 24px rgba(201, 113, 138, 0.3);
 }
 
 /* ─── Mobile responsive typography ─── */

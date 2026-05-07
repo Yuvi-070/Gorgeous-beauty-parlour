@@ -42,14 +42,14 @@ const spas = [
 
 function AmenityCard({ name, image }: { name: string; image: string }) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rose-200/50">
+    <div className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-rg-200/50">
       <div className="relative h-[420px] w-full overflow-hidden">
         <Image src={image} alt={name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
         <h3 className="text-white font-serif font-bold text-2xl md:text-3xl drop-shadow-lg">{name}</h3>
-        <div className="w-12 h-0.5 bg-rose-400 mx-auto mt-3" />
+        <div className="w-12 h-0.5 bg-rg-400 mx-auto mt-3" />
       </div>
     </div>
   );
@@ -58,11 +58,11 @@ function AmenityCard({ name, image }: { name: string; image: string }) {
 export default function AmenitiesPage() {
   return (
     <>
-      <div className="relative h-60 md:h-80 bg-pink-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rose-900/70 flex items-center justify-center">
+      <div className="relative h-60 md:h-80 bg-rg-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rg-900/70 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">Amenities</h1>
-            <p className="text-rose-100 text-sm"><Link href="/" className="hover:text-white">Home</Link> / Amenities</p>
+            <p className="text-rg-100 text-sm"><Link href="/" className="hover:text-white">Home</Link> / Amenities</p>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function AmenitiesPage() {
       <section className="py-24 bg-white/90">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Styling & Cutting</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Styling & Cutting</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Hair Cuts</h2>
           </div>
           <Carousel>
@@ -79,10 +79,10 @@ export default function AmenitiesPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-rose-50/70">
+      <section className="py-24 bg-rg-50/80">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Skin Care</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Skin Care</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Facial Treatments</h2>
           </div>
           <Carousel>
@@ -94,7 +94,7 @@ export default function AmenitiesPage() {
       <section className="py-24 bg-white/90">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Relaxation</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Relaxation</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">SPA Treatments</h2>
           </div>
           <Carousel>

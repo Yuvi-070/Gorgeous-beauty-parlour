@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function ContactsPage() {
   return (
     <>
-      <div className="relative h-60 md:h-80 bg-pink-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rose-900/70 flex items-center justify-center">
+      <div className="relative h-60 md:h-80 bg-rg-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rg-900/70 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">Contact Us</h1>
-            <p className="text-rose-100 text-sm"><Link href="/" className="hover:text-white">Home</Link> / Contact</p>
+            <p className="text-rg-100 text-sm"><Link href="/" className="hover:text-white">Home</Link> / Contact</p>
           </div>
         </div>
       </div>
@@ -16,14 +16,14 @@ export default function ContactsPage() {
         <div className="max-w-5xl mx-auto px-4">
           {/* Contact Info — centered grid */}
           <div className="text-center mb-14">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Get In Touch</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Get In Touch</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-10 section-heading mx-auto">
               Contact Information
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left max-w-3xl mx-auto">
-              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <span className="text-rose-600 text-xl">&#128205;</span>
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rg-100/70 bg-white/80 p-6 shadow-md hover:border-rg-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rg-100 to-rg-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <span className="text-rg-600 text-xl">&#128205;</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
@@ -35,30 +35,30 @@ export default function ContactsPage() {
                 </div>
               </div>
 
-              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <span className="text-rose-600 text-xl">&#128222;</span>
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rg-100/70 bg-white/80 p-6 shadow-md hover:border-rg-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rg-100 to-rg-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <span className="text-rg-600 text-xl">&#128222;</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
-                  <p><a href="tel:+919822186362" className="text-rose-600 hover:text-rose-700 text-sm transition-colors duration-300">+91 9822186362</a></p>
-                  <p><a href="tel:+917219636275" className="text-rose-600 hover:text-rose-700 text-sm transition-colors duration-300">+91 7219636275</a></p>
+                  <p><a href="tel:+919822186362" className="text-rg-600 hover:text-rg-700 text-sm transition-colors duration-300">+91 9822186362</a></p>
+                  <p><a href="tel:+917219636275" className="text-rg-600 hover:text-rg-700 text-sm transition-colors duration-300">+91 7219636275</a></p>
                 </div>
               </div>
 
-              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <span className="text-rose-600 text-xl">&#9993;&#65039;</span>
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rg-100/70 bg-white/80 p-6 shadow-md hover:border-rg-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rg-100 to-rg-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <span className="text-rg-600 text-xl">&#9993;&#65039;</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                  <a href="mailto:truptitale305@gmail.com" className="text-rose-600 hover:text-rose-700 text-sm transition-colors duration-300">truptitale305@gmail.com</a>
+                  <a href="mailto:truptitale305@gmail.com" className="text-rg-600 hover:text-rg-700 text-sm transition-colors duration-300">truptitale305@gmail.com</a>
                 </div>
               </div>
 
-              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rose-100/70 bg-white/80 p-6 shadow-md hover:border-rose-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <span className="text-rose-600 text-xl">&#128336;</span>
+              <div className="card-hover flex items-start gap-4 rounded-2xl border border-rg-100/70 bg-white/80 p-6 shadow-md hover:border-rg-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-rg-100 to-rg-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <span className="text-rg-600 text-xl">&#128336;</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-1">Business Hours</h3>
@@ -73,30 +73,30 @@ export default function ContactsPage() {
           </div>
 
           {/* Contact Form — centered */}
-          <div className="bg-white/95 border border-rose-100/80 rounded-3xl shadow-2xl shadow-rose-200/40 p-6 md:p-10 max-w-2xl mx-auto">
+          <div className="bg-white/95 border border-rg-100/80 rounded-3xl shadow-2xl shadow-rg-200/40 p-6 md:p-10 max-w-2xl mx-auto">
             <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Send a Message</h2>
             <form className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                  <input id="firstName" type="text" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Jane" />
+                  <input id="firstName" type="text" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-400 transition" placeholder="Jane" />
                 </div>
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                  <input id="lastName" type="text" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Doe" />
+                  <input id="lastName" type="text" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-400 transition" placeholder="Doe" />
                 </div>
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input id="email" type="email" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="jane@example.com" />
+                <input id="email" type="email" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-400 transition" placeholder="jane@example.com" />
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                <input id="phone" type="tel" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="+91 XXXXXXXXXX" />
+                <input id="phone" type="tel" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-400 transition" placeholder="+91 XXXXXXXXXX" />
               </div>
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service</label>
-                <select id="service" className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition">
+                <select id="service" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-400 transition">
                   <option value="">Select a service</option>
                   {["Advance Hair-Cut","Facial","SPA","Body Wax","Professional Make-Up","Hair Extension","Bridal","Hair Coloring","Hair Styling","Chemical Treatments","Advance Manicures & Pedicures","Body Polishing","Re-Bonding","Smoothening","Keratin Treatment","Botox","Nano Plastic Treatment"].map(s => (
                     <option key={s} value={s}>{s}</option>
@@ -105,9 +105,9 @@ export default function ContactsPage() {
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea id="message" rows={4} className="w-full border border-rose-200/80 bg-rose-50/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 transition" placeholder="Tell us how we can help..."></textarea>
+                <textarea id="message" rows={4} className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-400 transition" placeholder="Tell us how we can help..."></textarea>
               </div>
-              <button type="submit" className="w-full bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-700 hover:to-rose-600 text-white text-xs font-semibold tracking-[0.24em] uppercase py-4 rounded-full transition-all duration-300 shadow-lg shadow-rose-200/40 hover:shadow-xl hover:shadow-rose-300/50 hover:-translate-y-0.5">
+              <button type="submit" className="w-full bg-gradient-to-r from-rg-600 via-rg-500 to-rg-400 hover:from-rg-700 hover:via-rg-600 hover:to-rg-500 text-white text-xs font-semibold tracking-[0.24em] uppercase py-4 rounded-full transition-all duration-300 shadow-lg shadow-rg-200/40 hover:shadow-xl hover:shadow-rg-300/50 hover:-translate-y-0.5">
                 Send Message
               </button>
             </form>
@@ -117,7 +117,7 @@ export default function ContactsPage() {
 
       <section className="pb-24">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/40">
+          <div className="rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/40">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d375.06084092847664!2d73.84878384771385!3d18.64708686525778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c7f37604cc79%3A0x1993e7b4e4958d69!2sGORGEOUS%20BEAUTY%20PARLOUR!5e0!3m2!1sen!2sin!4v1719766026127!5m2!1sen!2sin"
               width="100%"

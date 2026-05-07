@@ -30,10 +30,10 @@ export default function AboutPage() {
     <>
       <div className="relative h-60 md:h-80 overflow-hidden">
         <Image src="/images/Gorgeous/Aboutus.png" alt="About Us" fill className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rose-900/70 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rg-900/70 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">About Us</h1>
-            <p className="text-rose-100 text-sm"><Link href="/" className="hover:text-white">Home</Link> / About Us</p>
+            <p className="text-rg-100 text-sm"><Link href="/" className="hover:text-white">Home</Link> / About Us</p>
           </div>
         </div>
       </div>
@@ -41,15 +41,15 @@ export default function AboutPage() {
       <section className="py-24 bg-white/90">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
           <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
+            <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
               <Image src="/images/Gorgeous/who_we_are1.jpg" alt="Who We Are" fill className="object-cover" />
             </div>
-            <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50 mt-8">
+            <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50 mt-8">
               <Image src="/images/Gorgeous/who_we_are2.jpg" alt="Our Team" fill className="object-cover" />
             </div>
           </div>
           <div className="text-center">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Our Story</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Our Story</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Who We Are</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Gorgeous Beauty Parlour is a premium beauty destination in Bhosari, Pune, dedicated to enhancing your natural beauty. With a passionate team of skilled beauty professionals, we provide personalized services that cater to your unique needs.
@@ -64,10 +64,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-rose-50/70">
+      <section className="py-24 bg-rg-50/80">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
           <div className="text-center">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Meet The Owner</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Meet The Owner</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Our Founder</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Our founder brings years of expertise and a genuine passion for beauty and wellness. With extensive training in the latest beauty techniques and a commitment to excellence, she has built Gorgeous Beauty Parlour into a trusted name in Pune.
@@ -76,7 +76,7 @@ export default function AboutPage() {
               Her dedication to client satisfaction and continuous learning ensures that Gorgeous Beauty Parlour stays at the forefront of beauty trends and techniques.
             </p>
           </div>
-          <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/60">
+          <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/60">
             <Image src="/images/Gorgeous/owner.jpg" alt="Owner" fill className="object-cover" />
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
       <section className="py-24 bg-white/90">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
           </div>
           <Carousel>
@@ -96,15 +96,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-rose-50/70">
+      <section className="py-24 bg-rg-50/80">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-500 text-xs tracking-[0.35em] uppercase mb-3">Certifications</p>
+            <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Certifications</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Certificates</h2>
           </div>
           <Carousel>
             {certificates.map((cert, i) => (
-              <div key={i} className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl shadow-rose-100/40 bg-white">
+              <div key={i} className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl shadow-rg-100/40 bg-white">
                 <Image src={cert} alt={`Certificate ${i + 1}`} fill className="object-contain p-4" />
               </div>
             ))}
@@ -114,10 +114,10 @@ export default function AboutPage() {
 
       <section className="py-24 bg-white/90">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
-          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
+          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
             <Image src="/images/Gorgeous/variety1.jpg" alt="Variety of Services 1" fill className="object-cover" />
           </div>
-          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl shadow-rose-200/50">
+          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
             <Image src="/images/Gorgeous/variety2.jpg" alt="Variety of Services 2" fill className="object-cover" />
           </div>
         </div>
