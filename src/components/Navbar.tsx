@@ -53,7 +53,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contacts"
-            className="bg-gradient-to-r from-rg-600 via-rg-500 to-rg-400 hover:from-rg-700 hover:via-rg-600 hover:to-rg-500 text-white text-xs font-semibold tracking-[0.24em] uppercase px-7 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-rg-200/50 hover:shadow-xl hover:shadow-rg-300/60 hover:-translate-y-0.5"
+            className="bg-gradient-to-r from-rg-600 to-rg-400 hover:from-rg-700 hover:to-rg-500 text-white text-xs font-semibold tracking-[0.24em] uppercase px-7 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-rg-200/50 hover:shadow-xl hover:shadow-rg-300/60 hover:-translate-y-0.5"
           >
             Book Now
           </Link>
