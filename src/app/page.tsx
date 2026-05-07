@@ -92,7 +92,7 @@ export default function HomePage() {
                 src="/images/Gorgeous/oursalon.jpg"
                 alt="Our Salon"
                 fill
-                className="object-cover hover:scale-108 transition-transform duration-700"
+                className="object-cover hover:scale-110 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -101,7 +101,7 @@ export default function HomePage() {
                 src="/images/Gorgeous/oursalon2.jpg"
                 alt="Our Salon Interior"
                 fill
-                className="object-cover hover:scale-108 transition-transform duration-700"
+                className="object-cover hover:scale-110 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
