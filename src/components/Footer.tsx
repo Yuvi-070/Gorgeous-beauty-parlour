@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1e1a1c] text-gray-300 border-t border-rose-100/20">
+    <footer className="bg-rg-900 text-rg-100 border-t border-rg-700/40">
       <div className="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-3 mb-4">
@@ -12,10 +12,10 @@ export default function Footer() {
             </div>
             <div className="text-center">
               <p className="text-sm font-semibold tracking-[0.3em] uppercase text-white">Gorgeous</p>
-              <p className="text-[0.6rem] tracking-[0.35em] uppercase text-rose-200">Beauty Parlour</p>
+              <p className="text-[0.6rem] tracking-[0.35em] uppercase text-rg-200">Beauty Parlour</p>
             </div>
           </div>
-          <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
+          <p className="text-sm text-rg-200/80 leading-relaxed max-w-sm">
             Professional beauty parlour offering premium hair, skin, and wellness treatments in Bhosari, Pune.
           </p>
         </div>
@@ -24,7 +24,7 @@ export default function Footer() {
           <ul className="space-y-3">
             {[{href:"/",l:"Home"},{href:"/about",l:"About Us"},{href:"/amenities",l:"Amenities"},{href:"/contacts",l:"Contact"}].map(({href,l}) => (
               <li key={href}>
-                <Link href={href} className="nav-link text-sm text-gray-400 hover:text-rose-300 transition-colors duration-300">
+                <Link href={href} className="nav-link text-sm text-rg-200/80 hover:text-rg-100 transition-colors duration-300">
                   {l}
                 </Link>
               </li>
@@ -33,17 +33,17 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-center">
           <h3 className="text-white font-semibold text-lg mb-5 font-serif">Contact</h3>
-          <address className="not-italic text-sm text-gray-400 space-y-2 text-center">
+          <address className="not-italic text-sm text-rg-200/80 space-y-2 text-center">
             <p className="leading-relaxed">Shop no 18, Jai Ganesh Samrajya, G wing,<br />behind HDFC ATM, Indrayani Nagar,<br />Bhosari, Pune - 411039</p>
-            <p><a href="tel:+919822186362" className="hover:text-rose-300 transition-colors duration-300">+91 9822186362</a></p>
-            <p><a href="tel:+917219636275" className="hover:text-rose-300 transition-colors duration-300">+91 7219636275</a></p>
-            <p><a href="mailto:truptitale305@gmail.com" className="hover:text-rose-300 transition-colors duration-300">truptitale305@gmail.com</a></p>
+            <p><a href="tel:+919822186362" className="hover:text-rg-100 transition-colors duration-300">+91 9822186362</a></p>
+            <p><a href="tel:+917219636275" className="hover:text-rg-100 transition-colors duration-300">+91 7219636275</a></p>
+            <p><a href="mailto:truptitale305@gmail.com" className="hover:text-rg-100 transition-colors duration-300">truptitale305@gmail.com</a></p>
           </address>
         </div>
       </div>
-      <div className="border-t border-rose-100/20 py-5 text-center text-xs text-gray-500">
+      <div className="border-t border-rg-700/40 py-5 text-center text-xs text-rg-200/70">
         <p>&copy; {new Date().getFullYear()} Gorgeous Beauty Parlour. All rights reserved.</p>
-        <p className="mt-1">Designed by <a href="https://www.linkedin.com/in/yuvraj-tale-m0705/" target="_blank" rel="noopener noreferrer" className="text-rose-300 hover:text-rose-200 transition-colors duration-300">Yuvraj Tale</a></p>
+        <p className="mt-1">Designed by <a href="https://www.linkedin.com/in/yuvraj-tale-m0705/" target="_blank" rel="noopener noreferrer" className="text-rg-200 hover:text-white transition-colors duration-300">Yuvraj Tale</a></p>
       </div>
     </footer>
   );
