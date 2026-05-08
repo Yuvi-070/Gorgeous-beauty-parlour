@@ -32,7 +32,7 @@ export default function HomePage() {
       <HeroSlider />
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">About Us</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto leading-tight">
@@ -65,7 +65,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-24 bg-rg-50/80">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
@@ -81,7 +81,7 @@ export default function HomePage() {
       <StatsCounter />
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Our Space</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Salon</h2>
@@ -113,7 +113,7 @@ export default function HomePage() {
 
       <section className="py-20 bg-gradient-to-r from-rg-700 via-rg-600 to-rg-500 text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)]" />
-        <div className="max-w-2xl mx-auto px-4 relative z-10">
+        <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Ready for a Gorgeous Makeover?</h2>
           <p className="text-rg-100 mb-10 text-lg max-w-xl mx-auto">Visit us today or call to book your appointment</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

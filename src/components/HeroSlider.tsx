@@ -66,8 +66,9 @@ export default function HeroSlider() {
             fill
             className="object-cover"
             priority={i === 0}
+            fetchPriority={i === 0 ? "high" : "auto"}
             sizes="100vw"
-            quality={80}
+            quality={75}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/75" />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-5">

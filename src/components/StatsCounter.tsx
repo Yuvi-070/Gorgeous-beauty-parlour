@@ -56,7 +56,7 @@ export default function StatsCounter() {
   return (
     <section className="counter-section py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-rg-900/90 via-rg-800/80 to-rg-700/70" />
-      <div className="relative z-10 max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         {stats.map((stat) => (
           <div key={stat.label} className="stat-card text-white rounded-2xl bg-white/10 border border-white/15 px-4 py-8 backdrop-blur-md text-center">
             <div className="text-4xl md:text-5xl font-bold font-serif mb-3 bg-gradient-to-r from-white to-rg-100 bg-clip-text text-transparent">
