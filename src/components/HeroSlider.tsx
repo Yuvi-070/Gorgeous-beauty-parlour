@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,14 +29,32 @@ const slides = [
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const goPrev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
+  const goNext = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 5000);
+    const timer = setInterval(goNext, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [goNext]);
+
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.changedTouches[0]?.clientX ?? null;
+    touchEndX.current = null;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.changedTouches[0]?.clientX ?? null;
+    if (touchStartX.current === null || touchEndX.current === null) return;
+    const delta = touchStartX.current - touchEndX.current;
+    if (Math.abs(delta) < 50) return;
+    if (delta > 0) goNext();
+    else goPrev();
+  };
 
   return (
-    <div className="relative h-[92vh] min-h-[560px] overflow-hidden bg-neutral-950">
+    <div className="relative h-[92vh] min-h-[560px] overflow-hidden bg-neutral-950 touch-pan-y" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -48,6 +66,8 @@ export default function HeroSlider() {
             fill
             className="object-cover"
             priority={i === 0}
+            sizes="100vw"
+            quality={80}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/75" />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-5">
@@ -76,14 +96,14 @@ export default function HeroSlider() {
         ))}
       </div>
       <button
-        onClick={() => setCurrent((c) => (c - 1 + slides.length) % slides.length)}
+        onClick={goPrev}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
         aria-label="Previous"
       >
         &#8249;
       </button>
       <button
-        onClick={() => setCurrent((c) => (c + 1) % slides.length)}
+        onClick={goNext}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full transition-colors border border-white/20 backdrop-blur"
         aria-label="Next"
       >

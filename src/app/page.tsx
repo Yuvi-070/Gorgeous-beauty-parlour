@@ -39,11 +39,17 @@ export default function HomePage() {
               Welcome to Gorgeous Beauty Parlour
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-14 items-center">
-            <div className="relative h-80 md:h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/60 order-1 md:order-none">
-              <Image src="/images/Gorgeous/why-choose.jpg" alt="Why Choose Gorgeous" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+          <div className="grid md:grid-cols-2 gap-14 items-center justify-items-center">
+            <div className="relative h-80 md:h-[420px] w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/60 order-1 md:order-none">
+              <Image
+                src="/images/Gorgeous/why-choose.jpg"
+                alt="Why Choose Gorgeous"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div className="text-center">
+            <div className="text-center max-w-xl mx-auto">
               <p className="text-gray-600 leading-relaxed mb-4">
                 Located in the heart of Bhosari, Pune, Gorgeous Beauty Parlour has been a trusted name in beauty and wellness for over a decade. We offer a comprehensive range of services tailored to bring out the best in you.
               </p>
@@ -80,12 +86,24 @@ export default function HomePage() {
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Our Space</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Salon</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="img-zoom relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
-              <Image src="/images/Gorgeous/oursalon.jpg" alt="Our Salon" fill className="object-cover hover:scale-108 transition-transform duration-700" />
+          <div className="grid md:grid-cols-2 gap-6 justify-items-center">
+            <div className="img-zoom relative h-72 w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
+              <Image
+                src="/images/Gorgeous/oursalon.jpg"
+                alt="Our Salon"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div className="img-zoom relative h-72 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
-              <Image src="/images/Gorgeous/oursalon2.jpg" alt="Our Salon Interior" fill className="object-cover hover:scale-108 transition-transform duration-700" />
+            <div className="img-zoom relative h-72 w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
+              <Image
+                src="/images/Gorgeous/oursalon2.jpg"
+                alt="Our Salon Interior"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
@@ -97,7 +115,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)]" />
         <div className="max-w-2xl mx-auto px-4 relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Ready for a Gorgeous Makeover?</h2>
-          <p className="text-rg-100 mb-10 text-lg">Visit us today or call to book your appointment</p>
+          <p className="text-rg-100 mb-10 text-lg max-w-xl mx-auto">Visit us today or call to book your appointment</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+919822186362" className="bg-white text-rg-700 text-xs font-semibold tracking-[0.2em] uppercase px-10 py-4 rounded-full hover:bg-rg-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
               Call Us Now
