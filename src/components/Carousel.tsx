@@ -1,6 +1,6 @@
 "use client";
 
-import { Children, ReactNode, useCallback, useEffect, useState } from "react";
+import { Children, ReactNode, isValidElement, useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 interface CarouselProps {
@@ -33,10 +33,10 @@ export default function Carousel({ children, className = "" }: CarouselProps) {
   return (
     <div className={`relative ${className}`}>
       <div className="relative w-full max-w-5xl mx-auto rounded-3xl">
-        <div className="overflow-hidden rounded-3xl touch-pan-y" ref={emblaRef}>
+        <div className="overflow-hidden rounded-3xl touch-pan-y" ref={emblaRef} aria-live="polite" aria-atomic="true">
           <div className="flex">
             {items.map((item, i) => (
-              <div key={i} className="min-w-0 flex-[0_0_100%]" aria-live={i === current ? "polite" : undefined}>
+              <div key={isValidElement(item) && item.key != null ? String(item.key) : `slide-${i}`} className="min-w-0 flex-[0_0_100%]">
                 {item}
               </div>
             ))}

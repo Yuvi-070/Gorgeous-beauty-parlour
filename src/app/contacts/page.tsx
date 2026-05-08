@@ -71,24 +71,24 @@ export default function ContactsPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                    <input id="firstName" type="text" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm" placeholder="Jane" />
+                    <input id="firstName" type="text" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-300" placeholder="Jane" required />
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                    <input id="lastName" type="text" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm" placeholder="Doe" />
+                    <input id="lastName" type="text" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-300" placeholder="Doe" required />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input id="email" type="email" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm" placeholder="jane@example.com" />
+                  <input id="email" type="email" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-300" placeholder="jane@example.com" required />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                  <input id="phone" type="tel" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm" placeholder="+91 XXXXXXXXXX" />
+                  <input id="phone" type="tel" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-300" placeholder="+91 XXXXXXXXXX" required />
                 </div>
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service</label>
-                  <select id="service" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm">
+                  <select id="service" className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-300" required>
                     <option value="">Select a service</option>
                     {["Advance Hair-Cut","Facial","SPA","Body Wax","Professional Make-Up","Hair Extension","Bridal","Hair Coloring","Hair Styling","Chemical Treatments","Advance Manicures & Pedicures","Body Polishing","Re-Bonding","Smoothening","Keratin Treatment","Botox","Nano Plastic Treatment"].map(s => (
                       <option key={s} value={s}>{s}</option>
@@ -97,9 +97,9 @@ export default function ContactsPage() {
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea id="message" rows={4} className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm" placeholder="Tell us how we can help..."></textarea>
+                  <textarea id="message" rows={4} className="w-full border border-rg-200/80 bg-rg-50/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-rg-300" placeholder="Tell us how we can help..." required></textarea>
                 </div>
-                <button type="submit" className="w-full bg-gradient-to-r from-rg-600 via-rg-500 to-rg-400 hover:from-rg-700 hover:via-rg-600 hover:to-rg-500 text-white text-xs font-semibold tracking-[0.24em] uppercase py-4 rounded-full shadow-lg shadow-rg-200/40 hover:shadow-xl hover:shadow-rg-300/50 hover:-translate-y-0.5">
+                <button type="submit" className="w-full bg-gradient-to-r from-rg-600 via-rg-500 to-rg-400 hover:from-rg-700 hover:via-rg-600 hover:to-rg-500 text-white text-xs font-semibold tracking-[0.24em] uppercase py-4 rounded-full shadow-lg shadow-rg-200/40 hover:shadow-xl hover:shadow-rg-300/50 hover:-translate-y-0.5 transition-all duration-300">
                   Send Message
                 </button>
               </form>
