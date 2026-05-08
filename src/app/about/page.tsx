@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <>
       <div className="relative h-60 md:h-80 overflow-hidden">
-        <Image src="/images/Gorgeous/Aboutus.png" alt="About Us" fill className="object-cover" />
+        <Image src="/images/Gorgeous/Aboutus.png" alt="About Us" fill className="object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-rg-900/70 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">About Us</h1>
@@ -39,13 +39,13 @@ export default function AboutPage() {
       </div>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center justify-items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center justify-items-center">
           <div className="grid grid-cols-2 gap-4 w-full max-w-xl">
             <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
-              <Image src="/images/Gorgeous/who_we_are1.jpg" alt="Who We Are" fill className="object-cover" />
+              <Image src="/images/Gorgeous/who_we_are1.jpg" alt="Who We Are" fill className="object-cover" loading="lazy" />
             </div>
             <div className="relative h-60 rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50 mt-8">
-              <Image src="/images/Gorgeous/who_we_are2.jpg" alt="Our Team" fill className="object-cover" />
+              <Image src="/images/Gorgeous/who_we_are2.jpg" alt="Our Team" fill className="object-cover" loading="lazy" />
             </div>
           </div>
           <div className="text-center max-w-xl mx-auto">
@@ -65,7 +65,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-rg-50/80">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center justify-items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center justify-items-center">
           <div className="text-center max-w-xl mx-auto">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Meet The Owner</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 section-heading mx-auto">Our Founder</h2>
@@ -77,13 +77,13 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative h-96 w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl shadow-rg-200/60">
-            <Image src="/images/Gorgeous/owner.jpg" alt="Owner" fill className="object-cover" />
+            <Image src="/images/Gorgeous/owner.jpg" alt="Owner" fill className="object-cover" loading="lazy" />
           </div>
         </div>
       </section>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">What We Offer</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Services</h2>
@@ -97,7 +97,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-rg-50/80">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-rg-500 text-xs tracking-[0.35em] uppercase mb-3">Certifications</p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 section-heading mx-auto">Our Certificates</h2>
@@ -113,12 +113,12 @@ export default function AboutPage() {
       </section>
 
       <section className="py-24 bg-white/90">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 justify-items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 justify-items-center">
           <div className="relative h-64 w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
-            <Image src="/images/Gorgeous/variety1.jpg" alt="Variety of Services 1" fill className="object-cover" />
+            <Image src="/images/Gorgeous/variety1.jpg" alt="Variety of Services 1" fill className="object-cover" loading="lazy" />
           </div>
           <div className="relative h-64 w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl shadow-rg-200/50">
-            <Image src="/images/Gorgeous/variety2.jpg" alt="Variety of Services 2" fill className="object-cover" />
+            <Image src="/images/Gorgeous/variety2.jpg" alt="Variety of Services 2" fill className="object-cover" loading="lazy" />
           </div>
         </div>
       </section>

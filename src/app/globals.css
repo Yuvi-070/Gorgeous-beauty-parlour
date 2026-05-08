@@ -2,28 +2,28 @@
 
 /* ─── Rose Gold custom colour palette (Tailwind v4 @theme) ─── */
 @theme {
-  --color-rg-50:  #fff6f8;
-  --color-rg-100: #fde8ed;
-  --color-rg-200: #f9cdd7;
-  --color-rg-300: #f0a5b5;
-  --color-rg-400: #e07a93;
-  --color-rg-500: #c9718a;
-  --color-rg-600: #a85471;
-  --color-rg-700: #8a3d58;
-  --color-rg-800: #6e2940;
-  --color-rg-900: #4e172b;
+  --color-rg-50:  #fff8fa;
+  --color-rg-100: #ffeef3;
+  --color-rg-200: #f8d6df;
+  --color-rg-300: #ebadb9;
+  --color-rg-400: #d98f9f;
+  --color-rg-500: #b76e79;
+  --color-rg-600: #9f5a67;
+  --color-rg-700: #844653;
+  --color-rg-800: #68313d;
+  --color-rg-900: #451b26;
 }
 
 :root {
-  --primary: #c9718a;
-  --primary-dark: #a85471;
-  --primary-light: #f4d5c4;
+  --primary: #b76e79;
+  --primary-dark: #9f5a67;
+  --primary-light: #f8d6df;
   --secondary: #2d1520;
-  --accent: #fff6f8;
-  --muted: #9e7280;
+  --accent: #fff8fa;
+  --muted: #8e5f6b;
   --surface: #ffffff;
-  --surface-alt: #fdf8f9;
-  --border: rgba(201, 113, 138, 0.25);
+  --surface-alt: #fffafc;
+  --border: rgba(183, 110, 121, 0.25);
   --shadow: 0 30px 60px -40px rgba(45, 21, 32, 0.45);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
